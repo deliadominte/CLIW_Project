@@ -17,7 +17,15 @@ body {
     max-width: 100%;
     max-height: 100%;
 }
-
+.large-img-container h1{
+    color: #3e9f99;
+    padding: 8px 12px;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+}
 .mySlides {display: none}
 img {vertical-align: middle;}
 
@@ -118,7 +126,7 @@ img {vertical-align: middle;}
 .lastlocations h2{
     text-align: center;
     text-decoration: none;
-    color: black;
+    color: #3e9f99;
 }
 .column {
     float: left;
@@ -129,7 +137,7 @@ img {vertical-align: middle;}
     height: 200px;
 }
 .column a{
-    color: black;
+    color: #3e9f99;
     padding: 8px 12px;
     position: relative;
     left: 5px;
