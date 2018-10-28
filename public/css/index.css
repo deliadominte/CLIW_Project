@@ -1,0 +1,91 @@
+*{
+	margin:0;
+}
+
+body {
+    font-family: 'Advent Pro';font-size: 22px;
+    background-color:#3e9f99;
+    color:white;
+}
+
+.container_img img{
+	max-width: 100%;
+    max-height: 100%;
+}
+
+.container_img{
+    width: 40%;
+    height: auto;
+    margin:auto;
+}
+
+.title{
+	font-size: 140px;
+}
+
+.description{
+	/*font-size: 2vw;*/
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
+.short_description{
+	display: none;
+}
+
+.content{
+	text-align: center;
+}
+
+.btn {
+  text-decoration: none;
+  border: 4px solid pink;
+  padding: 10px 58px;
+  color: pink;
+  display: inline-block;
+  margin-top: 3vw;
+}
+
+.btn:hover {
+  cursor: pointer;
+  border-color: white;
+  color: white;
+}
+
+.ref {
+	text-decoration: none;
+	color: pink;
+	cursor: pointer;
+}
+
+.ref:hover{
+	color: white;
+}
+
+.btns-container{
+
+}
+
+@media screen and (max-width: 600px) {
+
+	.title{
+		font-size: 20vw;
+		margin-top: 20%;
+		margin-bottom: 30px;
+	}
+
+	.short_description{
+		padding-right: 20px;
+		display: inline;
+	}
+	.description{
+		display: none;
+	}
+
+	.container_img{
+    	width: 90%;
+    	height: auto;
+    	margin:auto;
+}
+
+}
