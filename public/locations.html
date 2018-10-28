@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <link rel="stylesheet" type="text/css" href="css/locations.css">
+</head>
+<body>
+
+<header>
+    <div class="container_title">
+        <p href="#"></i>METOO</p>
+    </div>
+
+    <div class="container_img">
+        <img src="media/roses.png">
+    </div>
+</header>
+
+<div class="menu" id="large-menu">
+    <a href="#"></i>Profile</a>
+    <a href="#">Activity</a>
+    <a href="#">Locations</a>
+    <a href="#">Messages</a>
+    <a href="#">Discover people</a>
+    <a href="#"><i class="fas fa-bell"></i></a>
+</div>
+
+<div class="menu" id="small-menu">
+    <a class="icon" onclick="myFunction()">
+        <i class="fa fa-bars" id="menu-icon"></i>
+    </a>
+    <p id="title">METOO<i class="fas fa-bell"></i></p>
+    <a href="index.html"><i class="far fa-user"></i>Profile</a>
+    <a href="#"><i class="fas fa-walking"></i>Activity</a>
+    <a href="#"><i class="fas fa-map-marker-alt"></i>Locations</a>
+    <a href="#"><i class="fas fa-envelope"></i>Messages</a>
+    <a href="#"><i class="fas fa-users"></i>Discover people</a>
+</div>
+
+<div class="large-img-container">
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="media/img_place1.png" style="width:100%">
+            <div class="text"><a href="#">Fika Iasi</a></div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="media/img_place2%20.png" style="width:100%">
+            <div class="text"><a href="#">Jassyro</a></div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="media/img_place3.png" style="width:100%">
+            <div class="text"><a href="#">Red Pipes</a></div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <div class="lastlocations">
+        <h2>Your last locations:</h2>
+        <div class="row">
+            <div class="column">
+                <img src="media/img_place1.png" style="width:100%">
+                <a href="#">Fika Iasi</a>
+            </div>
+            <div class="column">
+                <img src="media/img_place2%20.png" style="width:100%">
+                <a href="#">Jassyro</a>
+            </div>
+            <div class="column">
+                <img src="media/img_place3.png" style="width:100%">
+                <a href="#">Red Pipes</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script>
+    function myFunction() {
+        var x = document.getElementById("small-menu");
+        if (x.className === "menu") {
+            x.className += " responsive";
+            document.getElementById("menu-icon").className = "far fa-times-circle"
+        } else {
+            x.className = "menu";
+            document.getElementById("menu-icon").className = "fa fa-bars"
+        }
+    }
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+</script>
+</html>
