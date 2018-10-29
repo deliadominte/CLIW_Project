@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <link rel="stylesheet" type="text/css" href="css/one_location_v2.css">
+</head>
+<body>
+
+<header>
+    <div class="container_title">
+        <p href="#"></i>METOO</p>
+    </div>
+
+    <div class="container_img">
+        <img src="media/roses.png">
+    </div>
+</header>
+
+<div class="menu" id="large-menu">
+    <a href="#"></i>Profile</a>
+    <a href="#">Activity</a>
+    <a href="#">Locations</a>
+    <a href="#">Messages</a>
+    <a href="#">Discover people</a>
+    <a href="#"><i class="fas fa-bell"></i></a>
+</div>
+
+<div class="menu" id="small-menu">
+    <a class="icon" onclick="myFunction()">
+        <i class="fa fa-bars" id="menu-icon"></i>
+    </a>
+    <p id="title">METOO<i class="fas fa-bell"></i></p>
+    <a href="index.html"><i class="far fa-user"></i>Profile</a>
+    <a href="#"><i class="fas fa-walking"></i>Activity</a>
+    <a href="#"><i class="fas fa-map-marker-alt"></i>Locations</a>
+    <a href="#"><i class="fas fa-envelope"></i>Messages</a>
+    <a href="#"><i class="fas fa-users"></i>Discover people</a>
+</div>
+
+<div class="large-img-container">
+    <h1>Fika Iasi</h1>
+    <div class="container_txt_img">
+        <img class="medium_img" src="media/img_place1.png">
+    </div>
+    <div class="about">
+        <h4>About:</h4>
+        <p>Fika is a concept, a state of mind, an attitude, a ritual</p>
+        <h4>Program:</h4>
+        <p>L-V: 08:00 - 22:00</p>
+        <p>S-D: 10:00 - 22:00</p>
+
+        <h4>Contact:</h4>
+        <div class="contact">
+            <div class="contactcell"><img src="media/fb.png"></div>
+            <div class="contactcell2">
+                <a href="https://www.facebook.com/NuDoarOPauzadeCafea/">https://www.facebook.com/NuDoarOPauzadeCafea/</a>
+            </div>
+        </div>
+        <div class="contact">
+            <div class="contactcell"><img src="media/mail.png"></div>
+            <div class="contactcell2">
+                <a>fikaiasi@gmail.com</a>
+            </div>
+        </div>
+        <div class="contact">
+            <div class="contactcell"><img src="media/phone-photo.png"></div>
+            <div class="contactcell2">
+                <a>075fikaiasi</a>
+            </div>
+        </div>
+        <h4>Statistics:</h4>
+        <p>Most frequently: Java developers</p>
+        <!--Api Google Maps-->
+        <h4>Localization:</h4>
+        <div id="map" style="width:400px;height:400px;background:grey"></div>
+        <a id="btn" href="edit_onelocation.html">Edit</a>
+    </div>
+</div>
+
+
+</body>
+<script>
+    function myFunction() {
+        var x = document.getElementById("small-menu");
+        if (x.className === "menu") {
+            x.className += " responsive";
+            document.getElementById("menu-icon").className = "far fa-times-circle"
+        } else {
+            x.className = "menu";
+            document.getElementById("menu-icon").className = "fa fa-bars"
+        }
+    }
+</script>
+</html>

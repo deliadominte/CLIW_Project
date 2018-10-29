@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    font-family: 'Advent Pro';font-size: 22px;
+    color: white;
+    background-color: #f5f5f5;
+
+    color: #000;
+}
+
+.large-img-container{
+    width:70%;
+    padding: 5%;
+    background-color: white;
+    margin:auto;
+    margin-top: 2%;
+}
+
+.large-img-container img{
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+#timepicker:before {
+    content:'Time:';
+    margin-right:.6em;
+    background-color: white;
+    border: 3px solid #3e9f99;
+    color: #3e9f99;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline;
+    width: 67%;
+}
+#imageUpload-button{
+    background-color: white;
+    border: 3px solid #3e9f99;
+    color: #3e9f99;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline;
+    width: 67%;
+}
+#imageUpload-button:hover{
+    background-color: white;
+    border: 3px solid pink;
+
+}
+.container_txt_img {
+    color: white;
+    height: 45vw;
+    position: relative;
+    overflow: hidden;
+}
+.large-img-container h1{
+    color: #3e9f99;
+    padding: 8px 12px;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+}
+.contactcell2 {
+    padding: 10px;
+    margin-left: 5%;
+}
+.contact{
+    display: block;
+    position: relative;
+}
+.contact img{
+    width: 35px;
+    height: 30px;
+}
+
+.about h4{
+    color: #3e9f99;
+    padding: 6px 10px;
+    bottom: 6px;
+    width: 100%;
+    text-decoration: none;
+    position: relative;
+
+}
+
+.about input, textarea{
+    font-size: 20px;
+    font-family: "Advent Pro";
+    border: 3px solid #3e9f99;
+    border-radius: 5px 0 0 5px;
+    padding: 5px 10px;
+    width: 70%;
+    height: 20px;
+    outline: 0;
+
+}
+
+.about #description{
+    height: 100px;
+    text-decoration: none;
+    width: 70%;
+    text-align: start;
+}
+#btn {
+    text-decoration: none;
+    width: 20%;
+    border: 3px solid #3e9f99;
+    padding: 10px 58px;
+    color: #3e9f99;
+    display: inline-block;
+    height: auto;
+    margin-left: 40%;
+    margin-top: 20px;
+    text-align: center;
+    background-color: white;
+}
+
+#btn:hover {
+    cursor: pointer;
+    border-color: pink;
+    color: #3e9f99;
+}
+.about input:hover,textarea:hover{
+    border: 3px solid pink;
+}
+
+#ceas1,#ceas2,#ceas3,#ceas4{
+    width: 10%;
+}
+@media screen and (max-width: 600px) {
+    .large-img-container{
+        width:100%;
+        padding: 0%;
+        margin: 0;
+    }
+
+    .container_txt_img{
+        height:auto;
+    }
+    .large-img-container img{
+        width: 50%;
+        height: auto;
+    }
+
+    body{
+        font-size: 15px;
+    }
+    .contact img{
+        width: 25px;
+        height: 20px;
+    }
+    #map{
+        width: 50%;
+        height: auto;
+    }
+    .about input, textarea{
+        font-size: 15px;
+    }
+    #description{
+        width: 50%;
+    }
+}

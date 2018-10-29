@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-family: 'Advent Pro';font-size: 22px;
+    color: white;
+    background-color: #f5f5f5;
+
+    color: #000;
+}
+
+.large-img-container{
+    width:70%;
+    padding: 5%;
+    background-color: white;
+    margin:auto;
+    margin-top: 2%;
+}
+
+.large-img-container img{
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+
+.container_txt_img {
+    color: white;
+    height: 45vw;
+    position: relative;
+    overflow: hidden;
+}
+.large-img-container h1{
+    color: #3e9f99;
+    padding: 8px 12px;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+}
+.contactcell2 {
+    padding: 10px;
+    margin-left: 5%;
+}
+.contact{
+    display: block;
+    position: relative;
+}
+.contact img{
+    width: 35px;
+    height: 30px;
+}
+
+.about h4{
+    color: #3e9f99;
+    padding: 6px 10px;
+    bottom: 6px;
+    width: 100%;
+    text-decoration: none;
+    position: relative;
+
+}
+
+@media screen and (max-width: 600px) {
+    .large-img-container{
+        width:100%;
+        padding: 0%;
+        margin: 0;
+    }
+
+    .container_txt_img{
+        height:auto;
+    }
+    .large-img-container img{
+        width: 50%;
+        height: auto;
+    }
+
+    body{
+        font-size: 15px;
+    }
+    .contact img{
+        width: 25px;
+        height: 20px;
+    }
+    #map{
+        width: 50%;
+        height: auto;
+    }
+}
