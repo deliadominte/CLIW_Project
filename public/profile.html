@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+<link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
+<link rel="stylesheet" type="text/css" href="css/menu.css">
+<link rel="stylesheet" type="text/css" href="css/profile.css">
+</head>
+<body>
+
+<header>
+  <div class="container_title">
+      <p href="#"></i>METOO</p>
+  </div>
+  
+  <div class="container_img">
+  <img src="media/roses.png">
+</div>
+</header>
+
+<div class="menu" id="large-menu">
+  <a href="#"></i>Profile</a>
+  <a href="#">Activity</a>
+  <a href="#">Locations</a>
+  <a href="#">Messages</a>
+  <a href="#">Discover people</a>
+  <a href="#"><i class="fas fa-bell"></i></a>
+</div>
+
+<div class="menu" id="small-menu">
+  <a class="icon" onclick="myFunction()">
+    <i class="fa fa-bars" id="menu-icon"></i>
+  </a>
+  <p id="title">METOO<i class="fas fa-bell"></i></p>
+  <a href="index.html"><i class="far fa-user"></i>Profile</a>
+  <a href="#"><i class="fas fa-walking"></i>Activity</a>
+  <a href="#"><i class="fas fa-map-marker-alt"></i>Locations</a>
+  <a href="#"><i class="fas fa-envelope"></i>Messages</a>
+  <a href="#"><i class="fas fa-users"></i>Discover people</a>
+</div>
+
+<div class="actual_page">
+<i class="fas fa-angle-right"></i> Profile
+</div>
+
+<div class="circle">
+<img src="media/profile.jpg" alt="Avatar">
+</div>
+
+<div class="profile_info" id="nonedit_pi">
+	<div class="profile_info_grid">
+	<div class="grid_first_column"> Name : </div>
+	<div class="grid_second_column"> Popescu Ioana</div>
+
+	<div class="grid_first_column"> Username : </div>
+	<div class="grid_second_column"> Ioana</div>
+
+	<div class="grid_first_column"> Email : </div>
+	<div class="grid_second_column"> ioana@gmail.com</div>
+
+	<div class="grid_first_column"> Phone : </div>
+	<div class="grid_second_column"> 0786353626</div>
+
+	<div class="grid_first_column"> Profession : </div>
+	<div class="grid_second_column"> Web designer</div>
+
+</div>
+<a onclick="editProfileInfo()"><i class="far fa-edit edit_icon"></i></a>
+</div>
+
+<div class="profile_info" id="edit_pi">
+	<div class="profile_info_grid">
+	<div class="grid_first_column"> Name : </div>
+	<input type="" name="" value="Popescu Ioana" class="grid_second_column"> 
+
+	<div class="grid_first_column"> Username : </div>
+	<input type="" name="" value="Ioana" class="grid_second_column"> 
+
+	<div class="grid_first_column"> Email : </div>
+	<input type="" name="" value="ioana@gmail.com" class="grid_second_column"> 
+
+	<div class="grid_first_column"> Phone : </div>
+	<input type="" name="" value="0786353626" class="grid_second_column"> 
+
+	<div class="grid_first_column"> Profession : </div>
+	<input type="" name="" value="Web designer" class="grid_second_column"> 
+
+</div>
+<a onclick="saveProfileInfo()"><i class="far fa-save save_icon">save</i></a>
+</div>
+
+<div class="profile_info description" id="nonedit_desc">
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+<br>
+<a onclick="editDescription()"><i class="far fa-edit edit_icon"></i></a>
+</div>
+
+<div class="profile_info description" id="edit_desc">
+	<textarea>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</textarea>
+<br>
+<a onclick="saveDescription()"><i class="far fa-save save_icon">save</i></a>
+</div>
+
+<div class="profile_info" id="nonedit_passions">
+	<h5>My passions:</h5>
+	<p class="passion">passion1</p>
+	<p class="passion">passion2</p>
+	<p class="passion">passion3</p>
+	<p class="passion">passion4</p>
+	<p class="passion">passion5</p>
+	<p class="passion">passion6</p>
+
+<br>
+<a onclick="editPassions()"><i class="far fa-edit edit_icon"></i></a>	
+</div>
+
+<div class="profile_info" id="edit_passions">
+	<h5>My passions:</h5>
+<label for="tag-typer">
+    <div id="tags">
+    	<span class="tag" id="1" onclick="removeTag(1)"><span class="close">×</span>passion1</span>
+    	<span class="tag" id="2" onclick="removeTag(2)"><span class="close">×</span>passion2</span>
+    	<span class="tag" id="3" onclick="removeTag(3)"><span class="close">×</span>passion3</span>
+    	<span class="tag" id="4" onclick="removeTag(4)"><span class="close">×</span>passion4</span>
+    	<span class="tag" id="5" onclick="removeTag(5)"><span class="close">×</span>passion5</span>
+    	<span class="tag" id="6" onclick="removeTag(6)"><span class="close">×</span>passion6</span>
+    <div id="demo"></div>
+    <input id="tag-typer" type="text" onkeypress="addTag(event)" placeholder="Add tag..."/>
+    </div> 
+</label>
+<br>
+<a onclick="savePassions()"><i class="far fa-save save_icon">save</i></a>	
+</div>
+
+</body>
+<script>
+function myFunction() {
+    var x = document.getElementById("small-menu");
+    if (x.className === "menu") {
+        x.className += " responsive";
+        document.getElementById("menu-icon").className = "far fa-times-circle"
+    } else {
+        x.className = "menu";
+        document.getElementById("menu-icon").className = "fa fa-bars"
+    }
+}
+
+function editProfileInfo(){
+
+	document.getElementById("edit_pi").style.display="block";
+	document.getElementById("nonedit_pi").style.display="none";
+}
+
+function saveProfileInfo(){
+
+	document.getElementById("edit_pi").style.display="none";
+	document.getElementById("nonedit_pi").style.display="block";
+}
+
+function editDescription(){
+
+	document.getElementById("edit_desc").style.display="block";
+	document.getElementById("nonedit_desc").style.display="none";
+}
+
+function saveDescription(){
+
+	document.getElementById("edit_desc").style.display="none";
+	document.getElementById("nonedit_desc").style.display="block";
+}
+
+function editPassions(){
+
+	document.getElementById("edit_passions").style.display="block";
+	document.getElementById("nonedit_passions").style.display="none";
+}
+
+function savePassions(){
+
+	document.getElementById("edit_passions").style.display="none";
+	document.getElementById("nonedit_passions").style.display="block";
+}
+
+    var $max_id=0;
+    function addTag(event) {
+        $max_id++;
+        var x = event.which || event.keyCode;
+        if(x==32){
+            document.getElementById("demo").innerHTML="<span class='tag' id="+$max_id.toString()+" onclick='removeTag"+"("+$max_id.toString()+")'><span class='close'>&times;</span>"+document.getElementById("tag-typer").value+"</span>"+"<div id='demo'></div>"+"<input name='tag[]' style='display:none;' value="+document.getElementById("tag-typer").value+" id="+'I'+$max_id.toString()+">";
+            document.getElementById("demo").id="altceva";
+            document.getElementById("tag-typer").value="";
+        }
+    };
+
+    function removeTag(id) {
+        var elem = document.getElementById(id);
+        elem.parentNode.removeChild(elem);
+
+        var elem = document.getElementById('I'+id);
+        elem.parentNode.removeChild(elem);
+    }
+</script>
+</html>
