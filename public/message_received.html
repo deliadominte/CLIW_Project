@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="css/menu.css">
-    <link rel="stylesheet" type="text/css" href="css/sent.css">
+    <link rel="stylesheet" type="text/css" href="css/message_received.css">
 </head>
 <body>
 
@@ -48,22 +48,13 @@
         <a id="btn2" href="sent.html">Sent</a>
         <a id="btn3" href="new_msg.html">Compose</a>
     </div>
-    <div class="messages">
-        <div class="msg">
-            <img src="media/nico.png" alt="Avatar" style="width:100%;">
-            <a class="name" href="profile_for_others.html">Ioana Nicoleta</a><a class="right" href="message_sent.html">Read message ></a>
-            <br>
-            <p>Subject: </p><a class="subject">Java answer</a>
-            <span class="time-right">12:32</span>
-        </div>
-        <div class="msg">
-            <img src="media/delia.png" alt="Avatar" style="width:100%;">
-            <a class="name" href="profile_for_others.html">Dominte Delia</a><a class="right" href="message_sent.html">Read message ></a>
-            <br>
-            <p>Subject: </p><a class="subject">Coffee at Fika</a>
-            <span>10:02</span>
-        </div>
+    <div class="message">
+        From :<span>11:02</span> <input type="text" id="from" value="Delia Dominte" required readonly>
+        To: <input type="text" id="to" value="Ioana" required readonly>
+        Subject: <input type="text" id="subject" value="Java question" required readonly>
+        <textarea id="msg" readonly>What is singleton class and how can we make a class singleton?</textarea>
     </div>
+    <a id="btn" href="new_msg.html">Reply</a>
 </div>
 
 </body>
