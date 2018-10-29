@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+<link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
+<link rel="stylesheet" type="text/css" href="css/menu.css">
+<link rel="stylesheet" type="text/css" href="css/profile.css">
+</head>
+<body>
+
+<header>
+  <div class="container_title">
+      <p href="#"></i>METOO</p>
+  </div>
+  
+  <div class="container_img">
+  <img src="media/roses.png">
+</div>
+</header>
+
+<div class="menu" id="large-menu">
+  <a href="#"></i>Profile</a>
+  <a href="#">Activity</a>
+  <a href="#">Locations</a>
+  <a href="#">Messages</a>
+  <a href="#">Discover people</a>
+  <a href="#"><i class="fas fa-bell"></i></a>
+</div>
+
+<div class="menu" id="small-menu">
+  <a class="icon" onclick="myFunction()">
+    <i class="fa fa-bars" id="menu-icon"></i>
+  </a>
+  <p id="title">METOO<i class="fas fa-bell"></i></p>
+  <a href="index.html"><i class="far fa-user"></i>Profile</a>
+  <a href="#"><i class="fas fa-walking"></i>Activity</a>
+  <a href="#"><i class="fas fa-map-marker-alt"></i>Locations</a>
+  <a href="#"><i class="fas fa-envelope"></i>Messages</a>
+  <a href="#"><i class="fas fa-users"></i>Discover people</a>
+</div>
+
+<div class="actual_page">
+<i class="fas fa-angle-right"></i> Profile
+</div>
+
+<div class="circle">
+<img src="profile.jpg" alt="Avatar">
+</div>
+
+<div class="profile_info" id="nonedit_pi">
+	<div class="profile_info_grid">
+	<div class="grid_first_column"> Name : </div>
+	<div class="grid_second_column"> Popescu Ioana</div>
+
+	<div class="grid_first_column"> Username : </div>
+	<div class="grid_second_column"> Ioana</div>
+
+	<div class="grid_first_column"> Email : </div>
+	<div class="grid_second_column"> ioana@gmail.com</div>
+
+	<div class="grid_first_column"> Phone : </div>
+	<div class="grid_second_column"> 0786353626</div>
+
+	<div class="grid_first_column"> Profession : </div>
+	<div class="grid_second_column"> Web designer</div>
+
+</div>
+</div>
+
+
+<div class="profile_info description" id="nonedit_desc">
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+<br>
+</div>
+
+<div class="profile_info" id="nonedit_passions">
+	<h5>Passions:</h5>
+	<p class="passion">passion1</p>
+	<p class="passion">passion2</p>
+	<p class="passion">passion3</p>
+	<p class="passion">passion4</p>
+	<p class="passion">passion5</p>
+	<p class="passion">passion6</p>
+
+<br>
+</div>
+
+</body>
+<script>
+function myFunction() {
+    var x = document.getElementById("small-menu");
+    if (x.className === "menu") {
+        x.className += " responsive";
+        document.getElementById("menu-icon").className = "far fa-times-circle"
+    } else {
+        x.className = "menu";
+        document.getElementById("menu-icon").className = "fa fa-bars"
+    }
+}
+</script>
+</html>
