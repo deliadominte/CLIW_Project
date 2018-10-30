@@ -119,6 +119,43 @@ body {
   color: #3e9f99 ;
 }
 
+.btn_wrapper{
+	width: 77%;
+	background-color: transparent;
+	margin:auto;
+	margin-top: 2%;
+	overflow: hidden;
+}
+
+button {
+    float:left;
+    background-color: #3e9f99;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    width: 50%;
+    border: 1px solid white;
+    font-family: 'Advent Pro';
+    font-size: 22px;
+}
+
+button:hover{
+    background-color: pink;
+    color: black;
+
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+
 @media screen and (max-width: 600px) {
 
 .circle{
@@ -133,6 +170,10 @@ body {
  	position:relative;
  	margin-left: 2.5vw;
   	margin-top: 2.5vw;
+}
+
+.btn_wrapper{
+	width: 100%;
 }
 
 .profile_info{
