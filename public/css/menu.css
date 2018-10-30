@@ -116,19 +116,19 @@ p i{
         display: inline-block;
         float: right;
     }
-    .menu.responsive a {
+    .menu.responsive a:not(:first-child) {
     float: none;
     display: block;
     text-align: left;
     padding-left: 20%;
   }
 
-  .menu.responsive i {
+  .menu i {
     padding-right: 5%;
   }
 
-  .menu.responsive {position: relative; margin:auto;}
-  .menu.responsive .icon {
+  /*.menu {position: relative; margin:auto;}*/
+  .menu .icon {
     position: absolute;
     padding: 4%;
     margin-left: 0;
