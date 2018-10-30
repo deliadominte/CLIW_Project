@@ -28,7 +28,7 @@ body {
     text-align: center;
 }
 
-.btns-container button {
+.btns-container .button {
     text-decoration: none;
     border: 4px solid white;
     padding: 10px 58px;
@@ -39,11 +39,8 @@ body {
     text-align: center;
 }
 
-.btns-container{
 
-}
-
-.btns-container button:hover {
+.btns-container .button:hover {
     cursor: pointer;
     border-color: white;
     color: white;
@@ -54,22 +51,22 @@ body {
     height: 25px;
 }
 
-.fb_btn{
+#fb_btn{
     background-color: #476bb8;
 }
-.fb_btn:hover{
+#fb_btn:hover{
     background-color: #3B5998;
 }
-.google_btn{
+#google_btn{
     background-color: #ec5446;
 }
-.google_btn:hover{
+#google_btn:hover{
     background-color: #EA4335;
 }
-.twitter_btn{
+#twitter_btn{
     background-color: #74bbf1;
 }
-.twitter_btn:hover{
+#twitter_btn:hover{
     background-color: #55ACEE;
 }
 

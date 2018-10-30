@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>METOO</title>
-<link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
-<link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
-<link rel="stylesheet" type="text/css" href="css/menu.css">
-<link rel="stylesheet" type="text/css" href="css/profile.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>METOO</title>
+	<link href='https://fonts.googleapis.com/css?family=Advent%20Pro' rel='stylesheet'>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+		  integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+	<link href='https://fonts.googleapis.com/css?family=Advent%20Pro' rel='stylesheet'>
+	<link rel="stylesheet" type="text/css" href="css/menu.css">
+	<link rel="stylesheet" type="text/css" href="css/profile.css">
 </head>
 <body>
 
@@ -18,7 +19,7 @@
     </div>
 
     <div class="container_img">
-        <img src="media/roses.png">
+        <img src="media/roses.png" alt="rose">
     </div>
 </header>
 
@@ -84,19 +85,19 @@
 <div class="profile_info" id="edit_pi">
 	<div class="profile_info_grid">
 	<div class="grid_first_column"> Name : </div>
-	<input type="" name="" value="Popescu Ioana" class="grid_second_column"> 
+	<input type="text" name="nume" value="Popescu Ioana" class="grid_second_column">
 
 	<div class="grid_first_column"> Username : </div>
-	<input type="" name="" value="Ioana" class="grid_second_column"> 
+	<input type="text" name="usernume" value="Ioana" class="grid_second_column">
 
 	<div class="grid_first_column"> Email : </div>
-	<input type="" name="" value="ioana@gmail.com" class="grid_second_column"> 
+	<input type="text" name="mail" value="ioana@gmail.com" class="grid_second_column">
 
 	<div class="grid_first_column"> Phone : </div>
-	<input type="" name="" value="0786353626" class="grid_second_column"> 
+	<input type="text" name="number" value="0786353626" class="grid_second_column">
 
 	<div class="grid_first_column"> Profession : </div>
-	<input type="" name="" value="Web designer" class="grid_second_column"> 
+	<input type="text" name="profession" value="Web designer" class="grid_second_column">
 
 </div>
 <a onclick="saveProfileInfo()"><i class="far fa-save save_icon">save</i></a>
@@ -140,13 +141,12 @@
     	<span class="tag" id="6" onclick="removeTag(6)"><span class="close">×</span>passion6</span>
     <div id="demo"></div>
     <input id="tag-typer" type="text" onkeypress="addTag(event)" placeholder="Add tag..."/>
-    </div> 
+    </div>
 </label>
 <br>
 <a onclick="savePassions()"><i class="far fa-save save_icon">save</i></a>	
 </div>
 
-</body>
 <script>
 function myFunction() {
     var x = document.getElementById("small-menu");
@@ -218,7 +218,7 @@ function savePassions(){
   document.getElementById("btn_upload").style.display="inline-block";
   document.getElementById("btn_save").style.display="inline-block"
   document.getElementById("btn_change").style.display="none"
- } 
+ }
 
   function saveImg(){
   document.getElementById("btn_upload").style.display="none";
@@ -226,4 +226,5 @@ function savePassions(){
   document.getElementById("btn_change").style.display="inline-block"
  }
 </script>
+</body>
 </html>

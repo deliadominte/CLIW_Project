@@ -50,7 +50,7 @@ form.search button {
     background: #3e9f99;
     color: white;
     font-size: 17px;
-    border: 1px solid #3e9f99;
+    border: #3e9f99 solid 1px;
     border-left: none;
     cursor: pointer;
 }
