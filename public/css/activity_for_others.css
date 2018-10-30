@@ -1,0 +1,70 @@
+body {
+	margin: 0;
+    font-family: 'Advent Pro';font-size: 22px;
+    color: white;
+    background-color: #f5f5f5;
+}
+
+.actual_page{
+	color: grey ;
+	font-size: 15px;
+	margin: 1vw 0 0 1vw;
+}
+
+.content_box{
+	width: 70%;
+	background-color: white;
+	margin:auto;
+	margin-top: 2%;
+	overflow: hidden;
+}
+
+.title_box{
+	background-color: #3e9f99;
+	padding: 5px;
+	margin: 0;
+	color: white;
+	text-align: center;
+}
+
+.activity_info{
+  padding: 5%;
+  color: grey;
+}
+.activity_info div{
+  padding: 1%;
+}
+.activity_info i{
+  padding: 1%;
+}
+
+.activity_info h4{
+  display: inline;
+  color: #3e9f99 ;
+}
+
+.circle{
+  background-color: white;
+    border-radius:50%;
+    width:15vw;
+    height:15vw;
+    border:2px solid #3e9f99;
+    margin:auto;
+    margin-top: 2%;
+}
+
+.circle img {
+  border-radius: 50%;
+  width:13vw;
+  height: 13vw;
+  position:relative;
+  margin-left:1vw;
+  margin-top: 1vw;
+}
+
+@media screen and (max-width: 600px) {
+	.content_box{
+		width: 100%;
+	}
+
+}
