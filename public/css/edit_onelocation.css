@@ -1,10 +1,14 @@
 body {
     margin: 0;
     font-family: 'Advent Pro';font-size: 22px;
-    color: white;
     background-color: #f5f5f5;
-
     color: #000;
+}
+
+.actual_page{
+    color: grey ;
+    font-size: 15px;
+    margin: 1vw 0 0 1vw;
 }
 
 .large-img-container{
@@ -16,7 +20,6 @@ body {
 }
 
 .large-img-container img{
-    position: absolute;
     margin-top: 10px;
     width: 100%;
     height: auto;
@@ -54,12 +57,16 @@ body {
     text-decoration: none;
     position: relative;
 }
-.contactcell2 {
+.contactcell {
+    display: inline-block;
     padding: 10px;
-    margin-left: 5%;
+    margin:auto;
+}
+.contactcell input{
+    width: 100%;
+    margin-left: 10px;
 }
 .contact{
-    display: block;
     position: relative;
 }
 .contact img{
@@ -80,7 +87,7 @@ body {
     font-size: 20px;
     font-family: "Advent Pro";
     border: 3px solid #3e9f99;
-    border-radius: 5px 0 0 5px;
+    border-radius:  0;
     padding: 5px 10px;
     width: 70%;
     height: 20px;
@@ -99,30 +106,25 @@ body {
 }
 #btn {
     text-decoration: none;
-    width: 20%;
-    border: 3px solid #3e9f99;
-    padding: 10px 58px;
-    color: #3e9f99;
+    width: 10%;
+    border: none;
+    padding: 15px 32px;
+    color: white;
     display: inline-block;
-    height: auto;
+    height: 25px;
     margin-left: 40%;
     margin-top: 20px;
     text-align: center;
-    background-color: white;
+    background-color: #3e9f99;
+    cursor: pointer;
 }
 
-#btn:hover {
-    cursor: pointer;
-    border-color: pink;
-    color: #3e9f99;
-}
-.about input:hover,textarea:hover{
-    border: 3px solid pink;
-}
+#map{width:400px;height:400px;background:grey;}
 @media screen and (max-width: 600px) {
     .large-img-container{
         width:100%;
-        padding: 0%;
+        padding:0;
+        padding-top: 5%;
         margin: 0;
     }
 
@@ -140,15 +142,30 @@ body {
     .contact img{
         width: 25px;
         height: 20px;
+        margin-bottom: 5px;
+    }
+    .contactcell {
+        display: inline-block;
+        padding: 5px;
+        margin:auto;
+    }
+    .contactcell input{
+        width: 50%;
+        margin-left: 0;
     }
     #map{
-        width: 50%;
-        height: auto;
+        width: 200px;
+        height: 200px;
+        background:grey;
     }
     .about input, textarea{
+        width: 91%;
         font-size: 15px;
     }
-    #description{
-        width: 50%;
+    .about #description{
+        width: 91%;
+    }
+    #imageUpload-button{
+        width: 84%;
     }
 }

@@ -139,27 +139,23 @@ form.search::after {
 #btn {
     text-decoration: none;
     width: 10%;
-    border: 3px solid #3e9f99;
+    border: none;
     border-radius: 0;
     padding: 5px 10px;
-    color: #3e9f99;
+    color: white;
+    cursor: pointer;
     display: inline-block;
     height: 30px;
     margin-left: 40%;
     margin-top: 10px;
     text-align: center;
-    background-color: white;
+    background-color: #3e9f99;
 }
 
-#btn:hover {
-    cursor: pointer;
-    background-color: #3e9f99;
-    color: white;
-}
 @media screen and (max-width: 600px) {
     .large-img-container{
         width:100%;
-        padding: 0%;
+        padding: 0;
         margin: 0;
     }
 
@@ -167,9 +163,11 @@ form.search::after {
         height:auto;
     }
 
-    .people{
-        width: 90%;
-        margin: auto;
+    .pers{
+        width: 99%;
+        padding: 0;
     }
+    .pers img{ width: 100%}
+    #btn{width: 30%}
 
 }

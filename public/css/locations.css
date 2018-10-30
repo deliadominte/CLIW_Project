@@ -5,6 +5,12 @@ body {
     background-color: #f5f5f5;
 }
 
+.actual_page{
+    color: grey ;
+    font-size: 15px;
+    margin: 1vw 0 0 1vw;
+}
+
 .large-img-container{
     width:70%;
     padding: 7%;
@@ -19,10 +25,11 @@ body {
 }
 .large-img-container h1{
     color: #3e9f99;
-    padding: 8px 12px;
+    padding: 8px 10px;
     bottom: 8px;
     width: 100%;
     text-align: center;
+    margin: auto;
     text-decoration: none;
     position: relative;
 }
@@ -204,17 +211,29 @@ img {vertical-align: middle;}
     clear: both;
     display: table;
 }
+@media screen and (max-width: 1100px){
+    .column{
+        width: 31%;
+        height: 100px;
+    }
+}
 @media screen and (max-width: 600px) {
     .prev, .next,.text,.lastlocations {font-size: 15px}
+    .large-img-container{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
     .column{
         width: 30%;
         height: 100px;
     }
     .search{
-        width: 50%;
+        width: 80%;
         margin-right: 10px;
         padding: 7px 45px;
-        left: 0%;
+        left: 0;
         margin-top: 3vw;
         font-size: 15px;
     }

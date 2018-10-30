@@ -3,8 +3,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>METOO</title>
     <link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+          integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="css/menu.css">
     <link rel="stylesheet" type="text/css" href="css/edit_onelocation.css">
@@ -13,7 +15,7 @@
 
 <header>
     <div class="container_title">
-        <p href="#"></i>METOO</p>
+        <a href="home.html">METOO</a>
     </div>
 
     <div class="container_img">
@@ -22,63 +24,73 @@
 </header>
 
 <div class="menu" id="large-menu">
-    <a href="#"></i>Profile</a>
-    <a href="#">Activity</a>
-    <a href="#">Locations</a>
-    <a href="#">Messages</a>
-    <a href="#">Discover people</a>
-    <a href="#"><i class="fas fa-bell"></i></a>
+    <a href="profile.html">Profile</a>
+    <a href="myactivity.html">Activity</a>
+    <a href="locations.html">Locations</a>
+    <a href="imbox.html">Messages</a>
+    <a href="discover_people.html">Discover people</a>
+    <a href="notifications.html"><i class="fas fa-bell"></i></a>
 </div>
 
 <div class="menu" id="small-menu">
     <a class="icon" onclick="myFunction()">
         <i class="fa fa-bars" id="menu-icon"></i>
     </a>
-    <p id="title">METOO<i class="fas fa-bell"></i></p>
-    <a href="index.html"><i class="far fa-user"></i>Profile</a>
-    <a href="#"><i class="fas fa-walking"></i>Activity</a>
-    <a href="#"><i class="fas fa-map-marker-alt"></i>Locations</a>
-    <a href="#"><i class="fas fa-envelope"></i>Messages</a>
-    <a href="#"><i class="fas fa-users"></i>Discover people</a>
+
+    <a id="title" href="home.html">METOO</a>
+    <a id="bell" href="notifications.html"><i class="fas fa-bell"></i></a>
+    <a href="profile.html"><i class="far fa-user"></i>Profile</a>
+    <a href="myactivity.html"><i class="fas fa-walking"></i>Activity</a>
+    <a href="locations.html"><i class="fas fa-map-marker-alt"></i>Locations</a>
+    <a href="imbox.html"><i class="fas fa-envelope"></i>Messages</a>
+    <a href="discover_people.html"><i class="fas fa-users"></i>Discover people</a>
+</div>
+
+<div class="actual_page">
+    <i class="fas fa-angle-right"></i> Locations<i class="fas fa-angle-right"></i> Location<i
+        class="fas fa-angle-right"></i> Edit
 </div>
 
 <div class="large-img-container">
     <div class="about">
-        <input type="text" placeholder="Fika Iasi" size="50"  required>
+        <input type="text" placeholder="Fika Iasi" size="50" required>
         <div class="container_txt_img">
             <img class="medium_img" src="media/img_place1.png">
         </div>
         <h4>Upload image:</h4>
         <input type="file" name="pic" id="imageUpload-button" accept="image/*" title="media/img_place1.png">
         <h4>About:</h4>
-        <textarea id="description"  placeholder="Fika is a concept, a state of mind, an attitude, a ritual"  required></textarea>
+        <textarea id="description" placeholder="Fika is a concept, a state of mind, an attitude, a ritual"
+                  required></textarea>
         <h4>Program:</h4>
-        <p>L-V: <input id="ceas1" type="text" required placeholder="08:00"> - <input id="ceas3" type="text" required placeholder="22:00"> </p>
-        <p>S-D: <input id="ceas2" type="text" required placeholder="10:00"> - <input id="ceas4" type="text" required placeholder="22:00"> </p>
+        <p>L-V: <input id="ceas1" type="text" required placeholder="08:00"> - <input id="ceas3" type="text" required
+                                                                                     placeholder="22:00"></p>
+        <p>S-D: <input id="ceas2" type="text" required placeholder="10:00"> - <input id="ceas4" type="text" required
+                                                                                     placeholder="22:00"></p>
 
         <h4>Contact:</h4>
         <div class="contact">
-            <div class="contactcell"><img src="media/fb.png"></div>
-            <div class="contactcell2">
+            <div class="contactcell">
+                <img src="media/fb.png">
                 <input type="url" placeholder="https://www.facebook.com/NuDoarOPauzadeCafea/" size="100" required>
             </div>
         </div>
         <div class="contact">
-            <div class="contactcell"><img src="media/mail.png"></div>
-            <div class="contactcell2">
+            <div class="contactcell">
+                <img src="media/mail.png">
                 <input type="email" placeholder="fikaiasi@gmail.com" size="100" required>
             </div>
         </div>
         <div class="contact">
-            <div class="contactcell"><img src="media/phone-photo.png"></div>
-            <div class="contactcell2">
-                <input type="text" placeholder="075fikaiasi" size="10" required>
+            <div class="contactcell">
+                <img src="media/phone-photo.png">
+                <input type="number" placeholder="0755990044" size="10" required>
             </div>
         </div>
         <!--Api Google Maps-->
         <h4>Localization:</h4>
-        <div id="map" style="width:400px;height:400px;background:grey"></div>
-        <a  id="btn" href="one_location_v2.html">Save</a>
+        <div id="map"></div>
+        <a id="btn" href="one_location_v2.html">Save</a>
 
     </div>
 </div>

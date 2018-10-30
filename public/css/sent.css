@@ -4,6 +4,11 @@ body {
     color: white;
     background-color: #f5f5f5;
 }
+.actual_page{
+    color: grey ;
+    font-size: 15px;
+    margin: 1vw 0 0 1vw;
+}
 
 .large-img-container{
     width:70%;
@@ -31,7 +36,6 @@ body {
 #btn1{
     text-decoration: none;
     border: 3px solid #3e9f99;
-    border-radius: 5px 0 0 5px;
     background-color: white;
     color: #3e9f99;
     margin: 0 0 0;
@@ -66,7 +70,6 @@ body {
     cursor: pointer;
     outline: 0;
     margin-left: 0;
-    border-radius: 0 5px 5px 0;
 }
 
 #btn2:hover{
@@ -86,7 +89,6 @@ body {
 .msg {
     display: inline-block;
     border: 3px solid #3e9f99;
-    border-radius: 5px;
     background-color: #f5f5f5;
     padding: 10px;
     margin: 10px 0;
@@ -145,21 +147,24 @@ body {
 @media screen and (max-width: 600px) {
     .large-img-container{
         width:100%;
-        padding: 0%;
+        padding: 0;
         margin: 0;
     }
 
     .container_txt_img{
         height:auto;
     }
+    .msg{
+        width: 99%;
+        padding: 0;
+    }
     #btn1{
         width: 100%;
-        border-radius: 5px;
         margin-top: 20px;
     }
     #btn3,#btn2{
         width: 100%;
-        border-radius: 5px;
     }
+
 
 }

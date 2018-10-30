@@ -1,12 +1,16 @@
 body {
     margin: 0;
     font-family: 'Advent Pro';font-size: 22px;
-    color: white;
     background-color: #f5f5f5;
 
     color: #000;
 }
 
+.actual_page{
+    color: grey ;
+    font-size: 15px;
+    margin: 1vw 0 0 1vw;
+}
 .large-img-container{
     width:70%;
     padding: 5%;
@@ -51,24 +55,18 @@ body {
 
 #btn {
     text-decoration: none;
-    width: 20%;
-    border: 3px solid #3e9f99;
+    width: 10%;
+    border: none;
     padding: 10px 58px;
-    color: #3e9f99;
+    color: white;
     display: inline-block;
+    cursor: pointer;
     height: auto;
-    margin-left: 40%;
+    margin-left: 35%;
     margin-top: 20px;
     text-align: center;
-    background-color: white;
+    background-color: #3e9f99;
 }
-
-#btn:hover {
-    cursor: pointer;
-    border-color: pink;
-    color: #3e9f99;
-}
-
 .about h4{
     color: #3e9f99;
     padding: 6px 10px;
@@ -79,6 +77,9 @@ body {
 
 }
 
+#map{
+    width:400px;height:400px;background:grey;
+}
 @media screen and (max-width: 600px) {
     .large-img-container{
         width:100%;
@@ -102,7 +103,7 @@ body {
         height: 20px;
     }
     #map{
-        width: 50%;
-        height: auto;
+        width: 200px;
+        height: 200px;
     }
 }
