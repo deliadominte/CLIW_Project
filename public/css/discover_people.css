@@ -130,6 +130,26 @@ form.search::after {
     text-decoration: none;
     font-size: 20px;
 }
+#btn {
+    text-decoration: none;
+    width: 10%;
+    border: 3px solid #3e9f99;
+    border-radius: 0;
+    padding: 5px 10px;
+    color: #3e9f99;
+    display: inline-block;
+    height: 30px;
+    margin-left: 40%;
+    margin-top: 10px;
+    text-align: center;
+    background-color: white;
+}
+
+#btn:hover {
+    cursor: pointer;
+    background-color: #3e9f99;
+    color: white;
+}
 @media screen and (max-width: 600px) {
     .large-img-container{
         width:100%;
