@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html  lang="ro-RO" vocab="http://schema.org/" typeof="schema:ScholarlyArticle" property="https://github.com/deliadominte/CLIW_Project">
+<head>
+    <meta charset="utf-8">
+    <title>Progresul interfeţei Web </title>
+    <style>ol{ list-style-type: none; } body{margin-right:7%; margin-left: 7%; font-size:120%;}</style>
+</head>
+<body>
+<header>
+    <h1 property="http://purl.org/dc/terms/title">METOO: Progresul interfeţei Web</h1>
+</header>
+<div role="contentinfo">
+    <hr>
+    <link property="itemListOrder" href="http://schema.org/ItemListOrderAscending"/>
+    <ol role="directory">
+        <li property="itemListElement" typeof="ListItem"><a href="#abstract">
+            <span>1.</span> Abstract</a>
+        </li>
+        <li property="itemListElement" typeof="ListItem"><a href="#introducere">
+            <span>2.</span> Introducere</a>
+        </li>
+        <li property="itemListElement" typeof="ListItem"><a href="#obiective">
+            <span>3.</span> Obiective</a>
+        </li>
+        <li property="itemListElement" typeof="ListItem"><a href="#etape">
+            <span>4.</span> Etape intermediare ale designul general</a>
+        </li>
+        <li property="itemListElement" typeof="ListItem"><a href="#etape">
+            <span>5.</span> Maniera de interacţiune cu utilizatorul</a>
+        </li>
+        <li property="itemListElement" typeof="ListItem"><a href="#git">
+            <span>6.</span> Mod de lucru cu Github</a>
+        </li>
+        <li property="itemListElement" typeof="ListItem"><a href="#concluzie">
+            <span>7.</span> Concluzie</a>
+        </li>
+    </ol>
+    <dl>
+        <dt>Autori</dt>
+        <dd property="http://purl.org/dc/terms/creator">
+            <a property="url" href="https://github.com/NicoletaIoana"><span property="familyName">Băcăoanu</span><span property="givenName">Nicoleta-Ioana</span></a>
+            <a property="url" href="https://github.com/deliadominte"><span property="familyName">Dominte</span> <span property="givenName">Delia</span></a>
+        </dd>
+        <dt>Site proiect</dt>
+        <dd>
+            <a property="url" href="https://github.com/deliadominte/CLIW_Project">GitHub</a>
+        </dd>
+        <dt>Tags</dt>
+        <dd>
+            <span>info, project, infoiasi, cliw, web, metoo </span>
+        </dd>
+    </dl>
+
+</div>
+<hr>
+<section id="abstract" role="doc-introduction" property="about">
+    <h3><span>1.</span> Abstarct:</h3>
+    <p>
+        Raportul de fata surprinde detaliile care au vizat progresul interfeței proiectului "METOO",
+        propus in cadrul laboratorului de Dezvoltarea aplicaţiilor Web la nivel de client. Sunt surprinse in prezentul raport detalii legate
+        de obiectivele proiectului si etapele realizarii acestor obictive, cat si date legate de folosirea Github.
+    </p>
+</section>
+<section id="introducere" role="doc-introduction" property="about">
+    <h3><span>2.</span> Introducere:</h3>
+    <p>
+        METOO se adreseaza persoanele care studiază/lucrează în localuri comune disponibile
+        într-un areal geografic: biblioteci, cafenele sau spaţii de co-working. Aplicația încurajeaza
+        interacțiunea dintre aceste persoane, pentru a putea studia/lucra împreuna.  Istoria a dovedit că oamenii sunt capabili de lucruri
+        mărețe doar dacă colaborează, sau după cum spune Chuck Page, “o frunză ce lucrează de una singură nu face umbră’’.
+    </p>
+</section>
+<section id="obiective">
+    <h3><span>3.</span> Obiective:</h3>
+    <link property="itemListOrder" href="http://schema.org/ItemListUnordered"/>
+    <ul>
+        <li property="itemListElement" typeof="ListItem">
+            Sa se dezvolte o aplicație Web ce realizeaza managementul informatiilor privitoare la locațiile în care se învață,
+            persoanele implicate, activitățile acestora, etc.
+        </li>
+        <li property="itemListElement" typeof="ListItem">
+            Fiecare utilizator, odată ajuns în localul în care va studia, va anunţa public ce activitate efectuează
+            printr-un mesaj parametrizat, în care va preciza ce tehnologii foloseste ("implementez [software] folosind
+            pentru front-end [bibliotecă] şi ca back-end [platforma] pentru [limbajul de programare]" sau
+            "studiez [concept|tehnologie]") și abilitățile sale ("pentru
+            [programare] ştiu ca [expert|novice] [limbaj|paradigmă|framework], iar pentru [design] am lucrat cu
+            [software]").
+        </li>
+        <li property="itemListElement" typeof="ListItem">
+            Toţi utilizatorii interesaţi de aceste tehnologii/abilităţi vor primi automat o notificare aferentă.
+        </li>
+        <li property="itemListElement" typeof="ListItem">
+            Sistemul va oferi suport pentru realizarea de conversaţii (a)sincrone și invitaţii de întâlnire "la o cafea".
+        </li>
+        <li property="itemListElement" typeof="ListItem">
+            De asemenea, utilizatorii vor putea vizualiza într-o manieră atractivă care sunt cele mai populare locuri din oraş şi ce tipuri de persoane le frecventează.
+        </li>
+    </ul>
+</section>
+<section id="etape">
+    <h3><span>4.</span> Etape intermediare ale designul general:</h3>
+    <link property="itemListOrder" href="http://schema.org/ItemListOrderAscending"/>
+    <ul property="steps">
+        <li property="itemListElement" typeof="ListItem">
+            Setarea Obiectivelor.
+        </li>
+        <li property="itemListElement" typeof="ListItem">
+            Odată ce cunoaștem obiectivele site-ului, putem defini structura proiectului. Ce pagini și caracteristici va avea aplicația
+            pentru a îndeplini obiectivele, precum și cronologia pentru a construi aceste pagini.
+            <figure typeof="sa:image"><img src="public/media/schelet.jpg"></figure>
+        </li>
+        <li property="itemListElement" typeof="ListItem">
+            Avînd structura proiectului, vom crea un ghid vizual cu wireframe.
+            Un wireframe este un schelet, un concept grafic, al unei pagini din aplicație.
+            Conține doar informații referitoare la structură, conținut, aranjare în pagină, puncte cheie de interes.
+            <a property="url" href="https://app.moqups.com/bni/8KIGKxDyZV/view/page/ad64222d5">Wireframe-ul aplicației</a>
+
+        </li>
+        <li property="itemListElement" typeof="ListItem">
+            Crearea de conținut (html): Acum, când avem o imagine mai amănunțită a site-ului, putem începe să creăm conținut pentru
+            paginile individuale.
+        </li>
+        <li property="itemListElement" typeof="ListItem">
+            Elemente vizuale (css): Cu arhitectura site-ului și un anumit conținut, putem începe să lucrăm la prezentare
+            (stil, layout, etc.).
+        </li>
+        <li property="itemListElement" typeof="ListItem">
+            Integrarea paginilor si asigurarea că acestea sunt omogene.
+        </li>
+        <li property="itemListElement" typeof="ListItem">
+            Testarea si Corectarea.
+        </li>
+    </ul>
+</section>
+<section id="interactiune">
+    <h3><span>5.</span> Maniera de interacţiune cu utilizatorul:</h3>
+    <link property="itemListOrder" href="http://schema.org/ItemListOrderAscending"/>
+    <ul property="steps">
+        <li property="itemListElement" typeof="ListItem">
+            Utilizatorul va fi întampinat, la deschiderea aplicației, de o pagina unde va putea alege să se logeze,
+            dacă are deja cont, sau sign up, dacă nu are cont. Aceste procese se vor face prin intermediul unei rețele de socializare.
+        </li>
+        <li property="itemListElement" typeof="ListItem">
+            După logare/sing up va fi redirecționat spre pagina "Home". În cadrul acestei pagini utilizatorul poate accesa urmatoarele pagini:
+             "Profile", "Activity", "Locations", "Messages", "Discover People", "Notifications"
+        </li>
+        <li property="itemListElement" typeof="ListItem">
+            În cadrul paginii "Profile", utilizatorul își poate vizualiza detaliile profilului sau să le editeze.
+        </li>
+        <li property="itemListElement" typeof="ListItem">
+            În cadrul paginii "Activity", se poate adauga sau vizualiza o activitate, ce include: locația, tipul activitații, tehnologiile folosite si abilitățile.
+        </li>
+        <li property="itemListElement" typeof="ListItem">
+            În cadrul paginii "Locations", vor fi afișate într-o manieră atractivă locațiile existente, sau căutate de catre utilizator prin
+            intermediul search bar-ului și ultimele trei locații în care a avut ultilizatorul activități.
+        </li>
+        <li property="itemListElement" typeof="ListItem">
+            În cadrul paginii "Messages", utilizatorul poate vizualiza mesajele primite sau trimise și să trimită un nou mesaj.
+        </li>
+        <li property="itemListElement" typeof="ListItem">
+            În cadrul paginii "Discover People", se poate căuta si vizualiza profilul altor utilizatori.
+        </li>
+        <li property="itemListElement" typeof="ListItem">
+            În cadrul paginii "Notifications", va primi înștiințari: despre activitățile ce folosesc tehnologii de care este
+            utilizatorul interesat, despre un nou mesaj primit, sau invitație la cafea.
+        </li>
+    </ul>
+</section>
+<section id="git" role="doc-chapter" property="about">
+    <h3><span>6.</span> Modul de lucru cu Github</h3>
+    <p>
+        Sistemul de management al codului-sursă ales este Github iar pentru a facilita
+        lucrul cu acesta, am folosit Github Desktop.
+        A fost necesara descarcarea aplicatiei, autentificarea cu contul de git
+        ,crearea unui repository pentru proiect si clonarea proiectului.
+        Modificarile facute in directorul proiectului sunt vizibile si pot si pot
+        fi adaugate proiectului prin succesiunea de comenzi "commit" si "push origin"
+        care pot fi realizate prin simpla apasare a unor butoane din aplicatia Github Desktop.
+        Pentru a prelua local schimbarile facute de ceilalti contribuitori se aplica, la fel de simplu, comenzile
+        "fetch origin" si "pull origin". Commit-urile au fost adaugate ("merge") branch-ului master.
+
+    </p>
+</section>
+
+</section>
+<section id="concluzie" role="doc-chapter" property="about">
+    <h3><span>7.</span> Concluzie</h3>
+    <p>
+        Prin urmarirea atingerii obiectivelor si parcurgând etapele menționate, interfeţa Web a fost finalizată cu succes.
+    </p>
+</section>
+
+</body>
+</html>
