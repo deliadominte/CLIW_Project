@@ -24,35 +24,6 @@ body {
   margin-top: 1vw;
 }
 
-.button_container{
-	display:block;
-	text-align: center;
-	margin:auto;
-}
-
-.button_container button{
-	border : none;
-	color: white;
-	background-color: #3e9f99; 
-	display: inline-block;
-	font-family: 'Advent Pro';
-	font-size: 22px;
-	margin: 5px;
-	padding: 5px;
-}
-
-.button_container input{
-	background-color: #3e9f99;
-}
-
-#btn_upload{
-	display: none;
-}
-
-#btn_save{
-	display: none;
-}
-
 .actual_page{
 	color: grey ;
 	font-size: 15px;
@@ -116,85 +87,36 @@ body {
 	margin-bottom: 2vw;
 }
 
-.edit_icon{
-	float: right;
-	color: #3e9f99;
-	cursor: pointer;
-	clear: both;
+.content_box{
+	width: 77%;
+	background-color: white;
+	margin:auto;
+	margin-top: 2%;
+	overflow: hidden;
 }
 
-#edit_pi{
-	display: none;
+.title_box{
+	background-color: #3e9f99;
+	padding: 5px;
+	margin: 0;
+	color: white;
+	text-align: center;
 }
 
-.save_icon{
-	float: right;
-	color: #3e9f99;
-	cursor: pointer;
+.activity_info{
+  padding: 5%;
+  color: grey;
+}
+.activity_info div{
+  padding: 1%;
+}
+.activity_info i{
+  padding: 1%;
 }
 
-#edit_desc{
-	display: none;
-}
-
-.description textarea{
-	width: 100%;
-	height: 10vw;
-	background-color: #d9d9d9;
-	font-family: 'Advent Pro';
-	font-size: 1.5vw;
-}
-
-#edit_passions{
-	display: none;
-}
-/*tags style*/
-
-#tags{
-    box-shadow: 1px 1px 4px #CCC inset;
-    padding: 10px;
-    width: 50%;
-    background: #fafafa;
-    margin: auto;
-    position:relative;
-}
-
-#tag-typer{
-    outline: none;
-    border: none;
-    padding: 6px;
-    margin: 3px;
-    margin-right: -25px;
-    width: 100px;
-    font-size: 14px;
-    color: #333;
-    background-color: transparent;
-}
-
-.tag{
-    color: white;
-    background-color: #3e9f99;
-    padding: 0.7vw;
-    border-radius: 20px;
-    display: inline-block;
-    padding: 5px 10px;
-    margin:2px 2px 2px 20px;
-    position: relative;
-    cursor: pointer;
-    float:left;
-}
-
-.tag .close{
-    position: absolute;
-    background: inherit;
-    left: -4px;
-    z-index: 3;
-    visibility: hidden;
-}
-
-.tag:hover .close{
-    visibility: visible;
-
+.activity_info h4{
+  display: inline;
+  color: #3e9f99 ;
 }
 
 @media screen and (max-width: 600px) {
@@ -239,4 +161,7 @@ body {
 	width: 90%;
 }
 
+.content_box{
+	width: 100%;
+}
 }

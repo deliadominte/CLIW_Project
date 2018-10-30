@@ -50,6 +50,13 @@
 <img src="media/profile.jpg" alt="Avatar">
 </div>
 
+<div class="button_container">
+<button id="btn_change" onclick="displayUploadImg()">Change photo</button>
+<button id="btn_save" onclick="saveImg()">Save</button>
+<br>
+<input id="btn_upload" type="file" name="pic" accept="image/*">
+</div>
+
 <div class="profile_info" id="nonedit_pi">
 	<div class="profile_info_grid">
 	<div class="grid_first_column"> Name : </div>
@@ -203,5 +210,17 @@ function savePassions(){
         var elem = document.getElementById('I'+id);
         elem.parentNode.removeChild(elem);
     }
+
+     function displayUploadImg(){
+  document.getElementById("btn_upload").style.display="inline-block";
+  document.getElementById("btn_save").style.display="inline-block"
+  document.getElementById("btn_change").style.display="none"
+ } 
+
+  function saveImg(){
+  document.getElementById("btn_upload").style.display="none";
+  document.getElementById("btn_save").style.display="none"
+  document.getElementById("btn_change").style.display="inline-block"
+ }
 </script>
 </html>
