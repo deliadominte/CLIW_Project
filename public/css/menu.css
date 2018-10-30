@@ -63,8 +63,10 @@ header{
     text-align: center;
 }
 
-.container_title p{
-  margin:0;
+.container_title a{
+    text-decoration: none;
+    color: #3e9f99;
+    margin:0;
 }
 
 p i{
@@ -87,6 +89,7 @@ p i{
    }
 
    #small-menu{
+       margin: auto;
     display: block;
    }
 
@@ -101,6 +104,18 @@ p i{
     display: block;
   }
 
+   #small-menu #title{
+       margin-left: auto;
+       display: inline-block;
+       color: #3e9f99;
+       background-color: white;
+   }
+    #small-menu  #bell{
+        color: #3e9f99;
+        background-color: white;
+        display: inline-block;
+        float: right;
+    }
     .menu.responsive a {
     float: none;
     display: block;
