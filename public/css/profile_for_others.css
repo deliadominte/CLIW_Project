@@ -127,7 +127,7 @@ body {
 	overflow: hidden;
 }
 
-button {
+.button {
     float:left;
     background-color: #3e9f99;
     border: none;
@@ -139,12 +139,13 @@ button {
     font-size: 16px;
     cursor: pointer;
     width: 50%;
+    box-sizing: border-box;
     border: 1px solid white;
     font-family: 'Advent Pro';
     font-size: 22px;
 }
 
-button:hover{
+.button:hover{
     background-color: pink;
     color: black;
 

@@ -47,7 +47,7 @@ body {
   color: #3e9f99 ;
 }
 
-button {
+.button {
     float:left;
     background-color: #3e9f99;
     border: none;
@@ -62,9 +62,10 @@ button {
     border: 1px solid white;
     font-family: 'Advent Pro';
     font-size: 22px;
+    box-sizing: border-box;
 }
 
-button:hover{
+.button:hover{
     background-color: pink;
     color: black;
 
