@@ -27,7 +27,45 @@ body {
     text-decoration: none;
     position: relative;
 }
+form.search{
+    margin:auto;
+    margin-top: 3%;
+    max-width:300px;
+}
 
+form.search input{
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid #3e9f99;
+    float: left;
+    width: 70%;
+    background: #f1f1f1;
+}
+
+form.search button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #3e9f99;
+    color: white;
+    font-size: 17px;
+    border: 1px solid #3e9f99;
+    border-left: none;
+    cursor: pointer;
+}
+
+form.search button:hover {
+    background: pink;
+}
+
+form.search::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.people{
+    margin-top: 5%;
+}
 .pers {
     display: inline-block;
     border: 3px solid #3e9f99;
