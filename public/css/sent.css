@@ -114,13 +114,16 @@ body {
     font-size: 20px;
 }
 
-.right {
+
+.time-right,.right {
     float: right;
     color: #3e9f99;
     text-decoration: none;
     font-size: 20px;
 }
-
+.name:hover,.right:hover{
+    font-weight: bold;
+}
 .msg span{
     float: right;
     color: #3e9f99;
