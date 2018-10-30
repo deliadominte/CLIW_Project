@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+<link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
+<link rel="stylesheet" type="text/css" href="css/menu.css">
+<link rel="stylesheet" type="text/css" href="css/coffee_invitation.css">
+</head>
+<body>
+<header>
+  <div class="container_title">
+      <p href="#"></i>METOO</p>
+  </div>
+  
+  <div class="container_img">
+  <img src="media/roses.png">
+</div>
+</header>
+
+<div class="menu" id="large-menu">
+  <a href="#"></i>Profile</a>
+  <a href="#">Activity</a>
+  <a href="#">Locations</a>
+  <a href="#">Messages</a>
+  <a href="#">Discover people</a>
+  <a href="#"><i class="fas fa-bell"></i></a>
+</div>
+
+<div class="menu" id="small-menu">
+  <a class="icon" onclick="myFunction()">
+    <i class="fa fa-bars" id="menu-icon"></i>
+  </a>
+  <p id="title">METOO<i class="fas fa-bell"></i></p>
+  <a href="index.html"><i class="far fa-user"></i>Profile</a>
+  <a href="#"><i class="fas fa-walking"></i>Activity</a>
+  <a href="#"><i class="fas fa-map-marker-alt"></i>Locations</a>
+  <a href="#"><i class="fas fa-envelope"></i>Messages</a>
+  <a href="#"><i class="fas fa-users"></i>Discover people</a>
+</div>
+
+<div class="actual_page">
+<i class="fas fa-angle-right"></i> Invitation
+</div>
+
+<div class="content_box">
+	<div class="title_box">
+		<i class="fas fa-coffee"></i> Coffee Invitation
+	</div>
+    
+    <div class="activity_info">
+
+    <div><i class="far fa-user-circle"></i> From: <h4><a href="profile_for_others.html">Ioana</a></h4></div>  
+      
+		<div><i class="fas fa-map-marker-alt"></i> Where:  <h4>Fika, Iasi, Romania</h4></div>
+
+    <div><i class="far fa-clock"></i> When: <h4>Monday at 5 pm</h4></div>
+
+    <div><i class="far fa-smile-beam"></i> Activity: <h4> Programming </h4></div>
+
+   </div>
+   <button>Accept</button>
+   <button>Decline</button>
+</div>
+
+
+</body>
+<script>
+function myFunction() {
+    var x = document.getElementById("small-menu");
+    if (x.className === "menu") {
+        x.className += " responsive";
+        document.getElementById("menu-icon").className = "far fa-times-circle"
+    } else {
+        x.className = "menu";
+        document.getElementById("menu-icon").className = "fa fa-bars"
+    }
+}
+</script>
+</html>
