@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Progresul aplicatiei </title>
-    <style>ol{ list-style-type: none; } body{margin-right:7%; margin-left: 7%; font-size:120%;}</style>
+    <style>ol{ list-style-type: none; } body{margin-right:7%; margin-left: 7%; font-size:120%;} img{width: 70%;}</style>
 </head>
 <body>
 <header>
@@ -28,8 +28,11 @@
         <li property="itemListElement" typeof="ListItem"><a href="#stocare">
             <span>5.</span> Soluţii de stocare disponibile la nivel de client</a>
         </li>
+        <li property="itemListElement" typeof="ListItem"><a href="#resurse">
+            <span>6.</span> Resurse web</a>
+        </li>
         <li property="itemListElement" typeof="ListItem"><a href="#concluzie">
-            <span>6.</span> Concluzie</a>
+            <span>7.</span> Concluzie</a>
         </li>
     </ol>
     <dl>
@@ -92,22 +95,82 @@
         <li property="itemListElement" typeof="ListItem">
             Implementarea functionalitatii de trimitere/vizualizare a invitatiilor la cafea.
         </li>
+
     </ul>
+    <figure typeof="sa:image"><img src="timeline.jpg" alt="schelet"></figure>
 </section>
 <section id="modelare" role="doc-chapter" property="about">
     <h3><span>4.</span> Modelarea datelor proprii:</h3>
-    <p>
+    <h5>Scheme de microdate HTML5 </h5>
+    <ul>
+    	<li property="itemListElement" typeof="ListItem">
+    		Modelare locatii: http://schema.org/location
+    	</li >
+    	<li property="itemListElement" typeof="ListItem">
+    		Modelare profil: http://schema.org/ProfilePage
+    	</li>
+    	<li property="itemListElement" typeof="ListItem">
+    		Modelare mesaje: http://schema.org/Message
+    	</li>
+    	<li property="itemListElement" typeof="ListItem">
+    		Modelare invitatie cafea: https://schema.org/InviteAction
+    	</li>
+     	<li property="itemListElement" typeof="ListItem">
+    		Modelare activitate:  http://schema.org/Action
+    	</li>
+    </ul>
 
-    </p>
+    <h5>Modelarea datelor ce urmeaza a fi cache-uite </h5>
+    	Datele ce urmeaza a fi cache-uite vor fi stocate sub forma de perechi de obiecte "Request" si "Response" ( "The caches only store pairs of Request and Response objects, representing HTTP requests and responses, respectively. However, the requests and responses can contain any kind of data that can be transferred over HTTP." : sursa->https://developers.google.com/web/fundamentals/instant-and-offline/web-storage/cache-api)
+    	<h6>Exemplu request : </h6>
+    		<p>const request = new Request('/images/sample1.jpg');</p>
+    	<h6>Exemplu Response:</h6>
+    	<p>const imageBlob = new Blob([data], {type: 'image/jpeg'});</p>
+		<p>const imageResponse = new Response(imageBlob);</p>
+		<p>const stringResponse = new Response('Hello world');</p>
+
+
 </section>
 <section id="stocare" role="doc-chapter" property="about">
     <h3><span>5.</span> Soluţii de stocare disponibile la nivel de client</h3>
     <p>
+    	Ca solutie de stocare la nivel de client, vom folosi Cache API.
+    	Cache API  este un sistem pentru stocarea și preluarea cererilor de rețea și a răspunsurilor corespunzătoare. Acesta fost creat pentru a permite service worker-ilor să cacheuiasca cererile de rețea, astfel încât aceștia să poată oferi răspunsuri adecvate chiar și offline. Totuși, acesta poate fi folosit și ca mecanism general de stocare.
+    	Mai multe informatii despre acesta se pot gasi de exemplu la adresa: https://developers.google.com/web/fundamentals/instant-and-offline/web-storage/cache-api
     </p>
 </section>
 
+<section id="resurse" role="doc-chapter" property="about">
+    <h3><span>6.</span> Resurse web</h3>
+
+
+        <li property="itemListElement" typeof="ListItem">
+		https://www.smashingmagazine.com/2016/02/making-a-service-worker/
+        </li>
+
+        <li property="itemListElement" typeof="ListItem">
+		https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle
+        </li>
+
+        <li property="itemListElement" typeof="ListItem">
+		https://www.smashingmagazine.com/2016/08/a-beginners-guide-to-progressive-web-apps/
+        </li>
+        
+        <li property="itemListElement" typeof="ListItem">
+        https://developers.google.com/web/fundamentals/instant-and-offline/web-storage/cache-api
+        </li>
+
+        <li property="itemListElement" typeof="ListItem">
+        https://medium.freecodecamp.org/progressive-web-apps-102-building-a-progressive-web-app-from-scratch-397b72168040?fbclid=IwAR2qzqnQcU2dWMI16oQUsfVwttL0RFyzHAYDtn0gW7j-OcbPpjS5-ljth60
+       </li>
+
+       <li property="itemListElement" typeof="ListItem">
+		https://pwa.tips/codelabs/?fbclid=IwAR3DLkMMpgrthDi_mpgdMwAHooK_PaR1LxMWS3-sXikYUOd6DHfzy7kFxuU#/introduction?_k=a0x38p
+        </li>
+</section>
+
 <section id="concluzie" role="doc-chapter" property="about">
-    <h3><span>6.</span> Concluzie</h3>
+    <h3><span>7.</span> Concluzie</h3>
     <p>
         Acestea sunt etapele intermediare ale dezvoltarii proiectului si cateva detalii despre cum vom modela datele.
     </p>
