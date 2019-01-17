@@ -33,7 +33,7 @@
 </div>
 
 <div class="menu" id="small-menu">
-    <a class="icon" onclick="myFunction()">
+    <a class="icon" onclick="menuFunction()">
         <i class="fa fa-bars" id="menu-icon"></i>
     </a>
 
@@ -69,17 +69,6 @@
     <div class="bottom_img_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
   </div>
 </div>
-<script>
-    function myFunction() {
-        var x = document.getElementById("small-menu");
-        if (x.className === "menu") {
-            x.className += " responsive";
-            document.getElementById("menu-icon").className = "far fa-times-circle"
-        } else {
-            x.className = "menu";
-            document.getElementById("menu-icon").className = "fa fa-bars"
-        }
-    }
-</script>
+<script  src="js/menu.js"></script>
 </body>
 </html>

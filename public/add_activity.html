@@ -32,7 +32,7 @@
 </div>
 
 <div class="menu" id="small-menu">
-    <a class="icon" onclick="myFunction()">
+    <a class="icon" onclick="menuFunction()">
         <i class="fa fa-bars" id="menu-icon"></i>
     </a>
 
@@ -106,17 +106,6 @@
     <a href="myactivity.html" class="save_button">Save Activity</a>
 </div>
 
-<script>
-    function myFunction() {
-        var x = document.getElementById("small-menu");
-        if (x.className === "menu") {
-            x.className += " responsive";
-            document.getElementById("menu-icon").className = "far fa-times-circle"
-        } else {
-            x.className = "menu";
-            document.getElementById("menu-icon").className = "fa fa-bars"
-        }
-    }
-</script>
+<script  src="js/menu.js"></script>
 </body>
 </html>
