@@ -49,81 +49,49 @@
     </div>
 
     <div class="actual_page">
-        <i class="fas fa-angle-right"></i> Profile <i class="fas fa-angle-right"></i> Ioana
+        <i class="fas fa-angle-right"></i> Profile <i class="fas fa-angle-right"></i> <p class = "inline" id = "uname_title">Ioana</p>
     </div>
 
     <div class="circle">
-        <img src="media/profile.jpg" alt="Avatar">
+        <img id ="profile-pic" src="media/profile.jpg" alt="Avatar">
     </div>
 
     <div class="btn_wrapper">
-        <a class="button" href="create_invitation.html">Send invitation</a>
-        <a class="button" href="new_msg.html">Send message</a>
+        <a class="button" id ="send-invitation" href="create_invitation.html">Send invitation</a>
+        <a class="button" id ="send-message" href="new_msg.html">Send message</a>
     </div>
     <div class="profile_info" id="nonedit_pi">
         <div class="profile_info_grid">
             <div class="grid_first_column"> Name : </div>
-            <div class="grid_second_column"> Popescu Ioana</div>
+            <div id ="nume" class="grid_second_column"> </div>
 
             <div class="grid_first_column"> Username : </div>
-            <div class="grid_second_column"> Ioana</div>
+            <div id ="username" class="grid_second_column"> </div>
 
             <div class="grid_first_column"> Email : </div>
-            <div class="grid_second_column"> ioana@gmail.com</div>
+            <div id ="email" class="grid_second_column"></div>
 
             <div class="grid_first_column"> Phone : </div>
-            <div class="grid_second_column"> 0786353626</div>
+            <div id ="phone" class="grid_second_column"></div>
 
             <div class="grid_first_column"> Profession : </div>
-            <div class="grid_second_column"> Web designer</div>
+            <div id ="profesie" class="grid_second_column"></div>
 
         </div>
     </div>
 
 
     <div class="profile_info description" id="nonedit_desc">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum.
-        <br>
     </div>
 
     <div class="profile_info" id="nonedit_passions">
         <h5>Passions &amp; Interests:</h5>
-        <p class="passion">passion1</p>
-        <p class="passion">passion2</p>
-        <p class="passion">passion3</p>
-        <p class="passion">passion4</p>
-        <p class="passion">passion5</p>
-        <p class="passion">passion6</p>
-
+        <div id = "passions">
+        </div>
         <br>
     </div>
 
-    <div class="content_box">
-        <div class="title_box">
-            Current activity
-        </div>
-
-        <div class="activity_info">
-            <div><i class="fas fa-map-marker-alt"></i> Location: <h4>Fika, Iasi, Romania</h4>
-            </div>
-
-            <div><i class="far fa-smile-beam"></i> Activity: <h4>Programming</h4>
-            </div>
-
-            <div><i class="fas fa-spa"></i>I implement a <h4>web application</h4> using for the front-end part <h4>Angular</h4>
-                and for back-end <h4>java</h4>
-            </div>
-
-            <div><i class="fas fa-feather"></i>I am an/a <h4>novice</h4>
-                <h4>java</h4> programmer. The things i know the best in this domain are: <h4>c++</h4>, <h4>java</h4>,
-                <h4>sql</h4>
-            </div>
-
-        </div>
+    <div id ="container" class="content_box">
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>

@@ -5,6 +5,10 @@ body {
     background-color: #f5f5f5;
 }
 
+.inline {
+	display: inline;
+}
+
 .circle{
 	background-color: white;
     border-radius:50%;

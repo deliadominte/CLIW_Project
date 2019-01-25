@@ -55,18 +55,27 @@
     <form>
     <div class="activity_info">
     
-		<div><i class="fas fa-map-marker-alt"></i> Where  : <input type="text" value="Fika, Iasi, Romania"> </div>
+		<div><i class="fas fa-map-marker-alt"></i> Where  : <input id = "inv-where" type="text"> </div>
 
-    <div><i class="far fa-clock"></i> When : <input type="text" value="Monday at 5am"></div>
+    <div><i class="far fa-clock"></i> When : <input id = "inv-when" type="text"></div>
 
-    <div><i class="far fa-smile-beam"></i> Activity: <input type="text" value="Programming"></div>
+    <div><i class="far fa-smile-beam"></i> Activity: <input id = "inv-activity" type="text"></div>
 
    </div>
    </form>
-  <a class="button" href="profile_for_others.html">Send invitation</a>
-  <a class="button" href="profile_for_others.html">Cancel</a>
+  <a class="button" id ="send-invitation">Send invitation</a>
+  <a class="button" id="cancel-invitation">Cancel</a>
 </div>
 
-<script  src="js/menu.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/5.7.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.3/firebase-firestore.js"></script>
+
+<script src="/js/config-database.js"></script>
+
+<script src="/js/createinvitation.js"></script>
+
+<script src="js/menu.js"></script>
 </body>
 </html>

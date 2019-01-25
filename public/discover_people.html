@@ -56,8 +56,8 @@
         <input type="text" placeholder="Search..." name="search2">
         <button type="submit"><i class="fa fa-search"></i></button>
     </form>
-    <div class="people">
-        <div class="pers">
+    <div id ="people-container" class="people">
+        <!-- <div class="pers">
             <img src="media/nico.png" alt="Avatar">
             <a class="name" href="profile_for_others.html">Ioana Nicoleta</a><a class="right"
                                                                                 href="profile_for_others.html">See
@@ -89,11 +89,23 @@
             <p>Profession: <a class="profession">Full Stack Developer</a></p>
             <p>Description: <a class="description">I am so clever that sometimes I don't understand a single word of
                 what I am saying.</a></p>
-        </div>
-        <a id="btn" href="#">Load More</a>
+        </div> -->
+        
     </div>
+    
+    <a id="btn" href="#">Load</a>
 </div>
 
-<script  src="js/menu.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/5.7.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.3/firebase-firestore.js"></script>
+
+<script src="/js/config-database.js"></script>
+
+<script src="/js/discover-people.js"></script>
+
+<script src="js/menu.js"></script>
+
 </body>
 </html>

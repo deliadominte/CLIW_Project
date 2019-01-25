@@ -56,19 +56,28 @@
 
     <div class="activity_info">
 
-        <div><i class="far fa-user-circle"></i> From: <h4><a href="profile_for_others.html">Ioana</a></h4></div>
+        <div><i class="far fa-user-circle"></i> From: <h4><a id = "inv-from" ></a></h4></div>
 
-        <div><i class="fas fa-map-marker-alt"></i> Where: <h4>Fika, Iasi, Romania</h4></div>
+        <div><i class="fas fa-map-marker-alt"></i> Where: <h4 id = "inv-where"></h4></div>
 
-        <div><i class="far fa-clock"></i> When: <h4>Monday at 5 pm</h4></div>
+        <div><i class="far fa-clock"></i> When: <h4 id = "inv-when"></h4></div>
 
-        <div><i class="far fa-smile-beam"></i> Activity: <h4> Programming </h4></div>
+        <div><i class="far fa-smile-beam"></i> Activity: <h4 id = "inv-activity"></h4></div>
 
     </div>
-    <button>Accept</button>
-    <button>Decline</button>
+    <button id = "accept-inv">Accept</button>
+    <button id = "decline-inv">Decline</button>
 </div>
 
-<script  src="js/menu.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/5.7.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.3/firebase-firestore.js"></script>
+
+<script src="/js/config-database.js"></script>
+
+<script src="/js/coffeeinvitation.js"></script>
+
+<script src="js/menu.js"></script>
 </body>
 </html>
