@@ -1,111 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>METOO</title>
     <link href='https://fonts.googleapis.com/css?family=Advent%20Pro' rel='stylesheet'>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
-          integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+        crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Advent%20Pro' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="css/menu.css">
     <link rel="stylesheet" type="text/css" href="css/add_activity.css">
 </head>
+
 <body>
-<header>
-    <div class="container_title">
-        <a href="home.html">METOO</a>
+    <header>
+        <div class="container_title">
+            <a href="home.html">METOO</a>
+        </div>
+
+        <div class="container_img">
+            <img src="media/roses.png" alt="rose">
+        </div>
+    </header>
+
+    <div class="menu" id="large-menu">
+        <a href="profile.html">Profile</a>
+        <a href="myactivity.html">Activity</a>
+        <a href="locations.html">Locations</a>
+        <a href="imbox.html">Messages</a>
+        <a href="discover_people.html">Discover people</a>
+        <a href="notifications.html"><i class="fas fa-bell"></i></a>
     </div>
 
-    <div class="container_img">
-        <img src="media/roses.png" alt="rose">
-    </div>
-</header>
+    <div class="menu" id="small-menu">
+        <a class="icon" onclick="menuFunction()">
+            <i class="fa fa-bars" id="menu-icon"></i>
+        </a>
 
-<div class="menu" id="large-menu">
-    <a href="profile.html">Profile</a>
-    <a href="myactivity.html">Activity</a>
-    <a href="locations.html">Locations</a>
-    <a href="imbox.html">Messages</a>
-    <a href="discover_people.html">Discover people</a>
-    <a href="notifications.html"><i class="fas fa-bell"></i></a>
-</div>
-
-<div class="menu" id="small-menu">
-    <a class="icon" onclick="menuFunction()">
-        <i class="fa fa-bars" id="menu-icon"></i>
-    </a>
-
-    <a id="title" href="home.html">METOO</a>
-    <a id="bell" href="notifications.html"><i class="fas fa-bell"></i></a>
-    <a href="profile.html"><i class="far fa-user"></i>Profile</a>
-    <a href="myactivity.html"><i class="fas fa-walking"></i>Activity</a>
-    <a href="locations.html"><i class="fas fa-map-marker-alt"></i>Locations</a>
-    <a href="imbox.html"><i class="fas fa-envelope"></i>Messages</a>
-    <a href="discover_people.html"><i class="fas fa-users"></i>Discover people</a>
-</div>
-
-<div class="actual_page">
-    <i class="fas fa-angle-right"></i> Activity <i class="fas fa-angle-right"></i>Add
-</div>
-
-<div class="content_box">
-    <div class="title_box">
-        Search and Add location
+        <a id="title" href="home.html">METOO</a>
+        <a id="bell" href="notifications.html"><i class="fas fa-bell"></i></a>
+        <a href="profile.html"><i class="far fa-user"></i>Profile</a>
+        <a href="myactivity.html"><i class="fas fa-walking"></i>Activity</a>
+        <a href="locations.html"><i class="fas fa-map-marker-alt"></i>Locations</a>
+        <a href="imbox.html"><i class="fas fa-envelope"></i>Messages</a>
+        <a href="discover_people.html"><i class="fas fa-users"></i>Discover people</a>
     </div>
 
-    <form class="search" action="/action_page.php">
-        <input type="text" placeholder="Search your location..." name="search2">
+    <div class="actual_page">
+        <i class="fas fa-angle-right"></i> Activity <i class="fas fa-angle-right"></i>Add
+    </div>
+
+    <div class="content_box">
+        <div class="title_box">
+            Search and Add location
+        </div>
+
+        <select name="" id="locations">
+            <option value="default" selected>Select location</option>
+        </select>
         <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
 
-    <div class="text_after_form">
-        Your location: <i class="fas fa-map-marker-alt"></i> Fika, Iasi, Romania
-    </div>
-</div>
-
-<div class="content_box">
-    <div class="title_box">
-        Add activity
+        <div id="location-text" class="text_after_form">
+            Your location: <i class="fas fa-map-marker-alt"></i> Not selected yet
+        </div>
     </div>
 
-    <form class="search" action="/action_page.php">
-        <input type="text" placeholder="Search your activity..." name="search2">
-        <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
+    <div class="content_box">
+        <div class="title_box">
+            Describe activity
+        </div>
 
-    <div class="text_after_form">
-        Your activity: <i class="far fa-smile-beam"></i> Programming
-    </div>
-</div>
-
-<div class="content_box">
-    <div class="title_box">
-        Describe activity
+        <div class="param_text">
+            I implement <input class="description" placeholder="software"> using for the front-end part <input class="description"
+                placeholder="library"> and for back-end
+            <input class="description" placeholder="platform"> using <input class="description" placeholder="programming language">
+        </div>
     </div>
 
-    <div class="param_text">
-        I implement <input value="software"> using for the front-end part <input value="library"> and for back-end
-        <input value="platform"> using <input value="programming language">
+    <div class="content_box">
+        <div class="title_box">
+            Activity related skills
+        </div>
+
+        <div class="param_text">
+            I am an/a <input class="skills" placeholder="level"> <input class="skills" placeholder="language/framework">
+            programmer. The things i know the best
+            in
+            this domain are: <input class="skills" placeholder="concept/language/..."> <input class="skills"
+                placeholder="concept/language/..."> <input class="skills" placeholder="concept/language/...">
+        </div>
     </div>
-</div>
 
-<div class="content_box">
-    <div class="title_box">
-        Activity related skills
+    <div class="wrapper_save_button">
+        <button id="save_button" class="save_button">Save Activity</button>
     </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 
-    <div class="param_text">
-        I am an/a <input value="level"> <input value="language/framework"> programmer. The things i know the best in
-        this domain are: <input value="concept/language/..."> <input value="concept/language/..."> <input
-            value="concept/language/...">
-    </div>
-</div>
+    <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase-firestore.js"></script>
 
-<div class="wrapper_save_button">
-    <a href="myactivity.html" class="save_button">Save Activity</a>
-</div>
+    <script src="/js/config-database.js"></script>
 
-<script  src="js/menu.js"></script>
+    <script src="/js/addactivities.js"></script>
+
+    <script src="js/menu.js"></script>
 </body>
+
 </html>

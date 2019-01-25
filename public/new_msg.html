@@ -58,13 +58,23 @@
         <a id="btn3" href="new_msg.html">Compose</a>
     </div>
     <div class="message">
-         <input type="text" id="from" value="Ioana" required>
          <input type="text" id="to" placeholder="To" required>
          <input type="text" id="subject" placeholder="Subject" required>
          <textarea id="msg" placeholder=" "></textarea>
     </div>
-    <a id="btn" href="sent.html">Send</a>
+    <button id="btn">Send</button>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/5.7.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.3/firebase-firestore.js"></script>
+
+<script src="/js/config-database.js"></script>
+
+<script src="/js/notif.js"></script>
+<script src="/js/newmsg.js"></script>
+
 <script  src="js/menu.js"></script>
 
 </body>
