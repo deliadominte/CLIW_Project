@@ -7,7 +7,7 @@ window.onload = () => {
                 const item = data.data();
 
                 document.getElementById('locations').innerHTML += `
-                    <option value="${item.nume}">${item.nume}</option>
+                    <option value="${item.name}">${item.name}</option>
                 `;
             });
         });

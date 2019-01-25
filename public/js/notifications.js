@@ -4,7 +4,7 @@ window.onload = () => {
     if (userId) {
         let notifIds = [];
 
-        db.collection('notifications').where('userId', '==', userId).get().then(querySnapshot => {
+        db.collection('notifications').where('userId', '==', userId).orderBy("created", "desc").get().then(querySnapshot => {
             querySnapshot.forEach(data => {
                 const notif = data.data();
 
@@ -13,7 +13,9 @@ window.onload = () => {
                 db.collection('users').where('username', '==', notif.createdBy).get().then(querySnapshot => {
                     querySnapshot.forEach(data => {
                         const user = data.data();
-
+                        var t = new Date(1970, 0, 1);
+                        t.setSeconds(notif.created.seconds);
+                        // console.log(t);
                         document.body.innerHTML += `
                             <div class="content_box${!notif.seen ? ' unread' : ''}">
                                 <div class="img_container">
@@ -25,7 +27,7 @@ window.onload = () => {
                                 </div>
                             
                                 <div class="date">
-                                    ${new Date(notif.created.seconds).toString()}
+                                    ${t.toString().substring(0,t.toString().indexOf('G'))}
                                 </div>
                             </div>
                         `;

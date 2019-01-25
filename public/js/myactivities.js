@@ -3,13 +3,13 @@ window.onload = () => {
 
     if (userId) {
         db.collection('activities').where('userId', '==', userId).get().then(querySnapshot => {
+            var current = " current"
             querySnapshot.forEach(function (doc) {
                 const activity = doc.data();
-
                 document.getElementById('container').innerHTML += `
                     <div id="${doc.id}">
                         <div class="title_box">
-                            Your current activity
+                            Your${current} activity
                         </div>
 
                         <div class="activity_info">
@@ -34,6 +34,7 @@ window.onload = () => {
                         </div>
                     </div>
                 `;
+                current = "";
             });
 
             const deletes = document.getElementsByClassName('delete_button');

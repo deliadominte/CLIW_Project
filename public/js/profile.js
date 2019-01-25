@@ -22,7 +22,7 @@ function addTag(event) {
     var x = event.which || event.keyCode;
     if (x == 32) {
         document.getElementById('passions').innerHTML += `
-            <p id="I${id}" class="passion">${document.getElementById("tag-typer").value}</p>
+            <p id="I${$max_id}" class="passion">${document.getElementById("tag-typer").value}</p>
         `;
 
         document.getElementById("demo").innerHTML = "<span class='tag' id=" + $max_id.toString() + " onclick='removeTag" + "(" + $max_id.toString() + ")'><span class='close'>&times;</span>" + document.getElementById("tag-typer").value + "</span>" + "<div id='demo'></div>" + "<input name='tag[]' style='display:none;' value=" + document.getElementById("tag-typer").value + " id=" + 'I' + $max_id.toString() + ">";

@@ -6,30 +6,32 @@ window.onload = () => {
             let ord =0;
             const   MAX_LOAD = 2;
             querySnapshot.forEach(function (doc) {
-                ord = ord + 1;
-                const user = doc.data();
-                let image;
-                let displaystyle;
-                if (user.image) {
-                    image = user.image;
-                } else {
-                    image = 'media/profile.jpg';
+                if(doc.id !=userId){
+                    ord = ord + 1;
+                    const user = doc.data();
+                    let image;
+                    let displaystyle;
+                    if (user.image) {
+                        image = user.image;
+                    } else {
+                        image = 'media/profile.jpg';
+                    }
+                    if(ord<=MAX_LOAD){
+                        displaystyle = "block";
+                    }else{
+                        displaystyle = "none";
+                    }
+                    document.getElementById('people-container').innerHTML += `
+                    <div id = "p-${ord}" style="display:${displaystyle}" class="pers">
+                    <img src=${image} alt="Avatar">
+                    <a class="name" href="profile_for_others.html?userId=${doc.id}">${user.name}</a>
+                    <a class="right" href="profile_for_others.html?userId=${doc.id}">See profile ></a>
+                    <br>
+                    <p>Profession: <a class="profession">${user.profesie}</a></p>
+                    <p>Description: <a class="description">${user.description}</a></p>
+                </div>
+                    `;
                 }
-                 if(ord<=MAX_LOAD){
-                    displaystyle = "block";
-                 }else{
-                    displaystyle = "none";
-                 }
-                document.getElementById('people-container').innerHTML += `
-                <div id = "p-${ord}" style="display:${displaystyle}" class="pers">
-                <img src=${image} alt="Avatar">
-                <a class="name" href="profile_for_others.html?userId=${doc.id}">${user.name}</a>
-                <a class="right" href="profile_for_others.html?userId=${doc.id}">See profile ></a>
-                <br>
-                <p>Profession: <a class="profession">${user.profesie}</a></p>
-                <p>Description: <a class="description">${user.description}</a></p>
-            </div>
-                `;
             });
 
             let loaded = MAX_LOAD;

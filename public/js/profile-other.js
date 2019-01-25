@@ -18,6 +18,7 @@ window.onload = () => {
                 }
 
                 document.getElementById('nume').textContent = user.name;
+                document.getElementById('uname_title').textContent = user.name;
                 document.getElementById('email').textContent = user.email;
                 document.getElementById('username').textContent = user.username;
                 document.getElementById('phone').textContent = user.phone;
