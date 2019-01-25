@@ -57,26 +57,19 @@
         <a id="btn2" href="sent.html">Sent</a>
         <a id="btn3" href="new_msg.html">Compose</a>
     </div>
-    <div class="messages">
-        <div class="msg">
-            <img src="media/nico.png" alt="Avatar">
-            <a class="name" href="profile_for_others.html">Ioana Nicoleta</a><a class="right" href="message_sent.html">Read
-            message ></a>
-            <br>
-            <p>Subject: </p><a class="subject">Java answer</a>
-            <span class="time-right">12:32</span>
-        </div>
-        <div class="msg">
-            <img src="media/delia.png" alt="Avatar">
-            <a class="name" href="profile_for_others.html">Dominte Delia</a><a class="right" href="message_sent.html">Read
-            message ></a>
-            <br>
-            <p>Subject: </p><a class="subject">Coffee at Fika</a>
-            <span class="time-right">10:02</span>
-        </div>
+    <div class="messages" id="messages">
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 
+<script src="https://www.gstatic.com/firebasejs/5.7.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.3/firebase-firestore.js"></script>
+
+<script src="/js/config-database.js"></script>
+
+<script src="/js/notif.js"></script>
+<script src="/js/newmsg.js"></script>
+<script src="/js/sent.js"></script>
 <script  src="js/menu.js"></script>
 </body>
 </html>
