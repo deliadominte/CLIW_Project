@@ -107,7 +107,16 @@ window.onload = () => {
             
                 </div>`;
                 
+                var latitudine=10;
+                var longitudine=10;
+                var mapOptions = {
+                    center: new google.maps.LatLng(latitudine, longitudine),
+                    zoom: 10,
+                    mapTypeId: google.maps.MapTypeId.HYBRID
+                    }
+                var map = new google.maps.Map(document.getElementById("map"), mapOptions);
                 });
+
                 
            });
             

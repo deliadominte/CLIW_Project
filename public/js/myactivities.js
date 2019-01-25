@@ -34,7 +34,7 @@ window.onload = () => {
                         </div>
                     </div>
                 `;
-                current = "";
+                current = " previous";
             });
 
             const deletes = document.getElementsByClassName('delete_button');
