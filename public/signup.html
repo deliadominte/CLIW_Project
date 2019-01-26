@@ -11,32 +11,24 @@
 
 <div class="content">
     <h1 class="title">METOO</h1>
-    <div class="btns-container">
-        <a href="#" class="button" id="fb_btn">
-            <img src="media/Facebook-logo.png" alt="Facebook">  Sign Up with Facebook
-        </a>
-        <a href="#" class="button" id="twitter_btn" >
-            <img src="media/twitter-logo.png" alt="Twitter">  Sign Up with Twitter
-        </a>
-        <a href="#" class="button" id="google_btn">
-            <img src="media/google-logo.png" alt="Google">  Sign Up with Google+
-        </a>
-    </div>
-    <div class="container_img">
-        <img src="media/roses.png" alt="rose">
+    <div class="big-container">
+
+        <form id="signupForm">
+          <div class="container">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="text" id="email" placeholder="Email" required>
+                <input type="text" id="nume" placeholder="Nume" required>
+                <input type="text" id="phone" placeholder="Phone" required>
+                <input type="text" id="profesie" placeholder="Profesie" required>
+                <input type="password" id="password" placeholder="Password" required>
+                
+            <button type="submit">Sign up</button>
+          </div>
+        </form>
+        <p>or</p>
+            <a class="ref" href="login.html">Log in</a>
     </div>
 </div>
-
-<form id="signupForm">
-    <input type="text" id="username" placeholder="Username">
-    <input type="text" id="email" placeholder="Email">
-    <input type="text" id="nume" placeholder="Nume">
-    <input type="text" id="phone" placeholder="Phone">
-    <input type="text" id="profesie" placeholder="Profesie">
-    <input type="password" id="password" placeholder="Password">
-
-    <button type="submit">Signup</button>
-</form>
 
 <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 
