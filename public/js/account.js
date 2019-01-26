@@ -21,7 +21,6 @@ window.onload = () => {
                 reader.readAsDataURL(btn_upload);
             }
         }
-
         document.getElementById('save-edit').onclick = e => {
             document.getElementById("edit_pi").style.display = "none";
             document.getElementById("nonedit_pi").style.display = "block";
@@ -34,13 +33,24 @@ window.onload = () => {
                 profesie: document.getElementById('profesie-edit').value
             }
 
-            document.getElementById('nume').textContent = document.getElementById('nume-edit').value;
-            document.getElementById('email').textContent = document.getElementById('email-edit').value;
-            document.getElementById('username').textContent = document.getElementById('username-edit').value;
-            document.getElementById('phone').textContent = document.getElementById('phone-edit').value;
-            document.getElementById('profesie').textContent = document.getElementById('profesie-edit').value;
-
-            db.collection("users").doc(userId).set({ ...edit }, { merge: true });
+            db.collection('users').where('username', '==', edit.username).get().then( querySnapshot => {
+                let flag = 0;
+                querySnapshot.forEach(function (doc) {
+                    if(doc.id != userId)
+                        flag = 1;
+                });
+                
+                if (flag == 1) 
+                           alert('Username already used!');
+                else {
+                    document.getElementById('nume').textContent = document.getElementById('nume-edit').value;
+                    document.getElementById('email').textContent = document.getElementById('email-edit').value;
+                    document.getElementById('username').textContent = document.getElementById('username-edit').value;
+                    document.getElementById('phone').textContent = document.getElementById('phone-edit').value;
+                    document.getElementById('profesie').textContent = document.getElementById('profesie-edit').value;
+                    db.collection("users").doc(userId).set({ ...edit }, { merge: true });
+                }
+            });
         }
 
         document.getElementById('save-desc').onclick = e => {
