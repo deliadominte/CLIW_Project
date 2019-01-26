@@ -33,17 +33,20 @@ window.onload = () => {
                         }
                     });
                     if(!max_skill) max_skill="Nobody";
-                    document.getElementById("location").innerHTML=`<h1>${location.name}</h1>
-                <div class="container_txt_img">
+                    document.getElementById("location").innerHTML=`<h1 itemprop="name">${location.name}</h1>
+                <div itemprop="image" class="container_txt_img">
                     <img class="medium_img" src=${location.image} alt=${location.name}>
                 </div>
                 <div class="about">
                     <h4>About:</h4>
-                    <p>${location.about}</p>
+                    <p itemprop="description">${location.about}</p>
+                    <div itemprop="openingHours">
                     <h4>Program:</h4>
                     <p>L-V: ${location.program[0]}</p>
                     <p>S-D: ${location.program[1]}</p>
+                    </div>
             
+                    <div itemprop="contactPoint">
                     <h4>Contact:</h4>
                     <div class="contact">
                         <div class="contactcell"><img src="media/fb.png" alt="Facebook"></div>
@@ -63,11 +66,12 @@ window.onload = () => {
                             <a>${location.contact[2]}</a>
                         </div>
                     </div>
+                    </div> 
                     <h4>Statistics:</h4>
                     <p>Most frequently: ${location.statistics}</p>
                     <!--Api Google Maps-->
                     <h4>Localization:</h4>
-                    <div id="map">${location.location}</div>
+                    <div itemprop="location" itemscope itemtype ="https://schema.org/Place"  id="map">${location.location}</div>
             
                 </div>`;document.getElementById("location").innerHTML=`<h1>${location.name}</h1>
                 <div class="container_txt_img">
@@ -103,7 +107,7 @@ window.onload = () => {
                     <p>Most frequently: ${max_skill}</p>
                     <!--Api Google Maps-->
                     <h4>Localization:</h4>
-                    <div id="map">${location.location}</div>
+                    <div itemprop="location" itemscope itemtype ="https://schema.org/Place" id="map">${location.location}</div>
             
                 </div>`;
                 

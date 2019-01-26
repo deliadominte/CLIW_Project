@@ -18,13 +18,15 @@ window.onload = () => {
                     querySnapshot.forEach(data => {
                          receiver = data.data();
                          document.getElementById("messages").innerHTML += `
-                         <div class="msg">
-                         <img src="${msg.image}" alt="Avatar">
-                         <a class="name" href="/profile_for_others.html?userId=${receiver.id}">${receiver.name}</a>
+                         <div itemscope itemtype ="https://schema.org/Message" class="msg">
+                         <div itemprop="recipient" itemscope itemtype ="http://schema.org/Person">
+                         <img itemprop="image" itemscope itemtype="https://schema.org/ImageObject"  src="${msg.image}" alt="Avatar">
+                         <a itemprop="name" class="name" href="/profile_for_others.html?userId=${receiver.id}">${receiver.name}</a>
+                         </div>
                          <br>
-                         <p>Subject: </p><a class="subject">${msg.subject}</a>
-                         <p>Message: </p><a class="subject">${msg.message}</a>
-                         <span class="time-right">${msg.time}</span>
+                         <p>Subject: </p><a itemprop="about" class="subject">${msg.subject}</a>
+                         <p>Message: </p><a itemprop="text" class="subject">${msg.message}</a>
+                         <span itemprop="dateSent" class="time-right">${msg.time}</span>
                          </div>
                          `;
                     });

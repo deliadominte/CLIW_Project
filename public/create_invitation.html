@@ -48,18 +48,18 @@
 <i class="fas fa-angle-right"></i> Invitation
 </div>
 
-<div class="content_box">
-	<div class="title_box">
+<div itemscope itemtype ="https://schema.org/InviteAction" class="content_box">
+	<div itemprop="about" class="title_box">
 		<i class="fas fa-coffee"></i> Coffee Invitation
 	</div>
     <form>
     <div class="activity_info">
     
-		<div><i class="fas fa-map-marker-alt"></i> Where  : <input id = "inv-where" type="text"> </div>
+		<div itemprop="location" itemscope itemtype ="https://schema.org/Place" ><i class="fas fa-map-marker-alt"></i> Where  : <input id = "inv-where" type="text"> </div>
 
-    <div><i class="far fa-clock"></i> When : <input id = "inv-when" type="text"></div>
+    <div itemprop="startTime"><i class="far fa-clock"></i> When : <input id = "inv-when" type="text"></div>
 
-    <div><i class="far fa-smile-beam"></i> Activity: <input id = "inv-activity" type="text"></div>
+    <div itemprop="event"><i class="far fa-smile-beam"></i> Activity: <input id = "inv-activity" type="text"></div>
 
    </div>
    </form>

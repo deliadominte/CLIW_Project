@@ -51,9 +51,9 @@
 	<div class="actual_page">
 		<i class="fas fa-angle-right"></i> Profile
 	</div>
-
+    <div itemscope itemtype ="http://schema.org/Person">
 	<div class="circle">
-		<img id="profile-pic" src="media/profile.jpg" alt="Avatar">
+		<img itemprop="image" itemscope itemtype="https://schema.org/ImageObject" id="profile-pic" src="media/profile.jpg" alt="Avatar">
 	</div>
 
 	<div class="button_container">
@@ -66,19 +66,19 @@
 	<div class="profile_info" id="nonedit_pi">
 		<div class="profile_info_grid">
 			<div class="grid_first_column"> Name : </div>
-			<div id="nume" class="grid_second_column"></div>
+			<div itemprop="name" id="nume" class="grid_second_column"></div>
 
 			<div class="grid_first_column"> Username : </div>
-			<div id="username" class="grid_second_column"></div>
+			<div itemprop="additionalName" id="username" class="grid_second_column"></div>
 
 			<div class="grid_first_column"> Email : </div>
-			<div id="email" class="grid_second_column"></div>
+			<div itemprop="email" id="email" class="grid_second_column"></div>
 
 			<div class="grid_first_column"> Phone : </div>
-			<div id="phone" class="grid_second_column"></div>
+			<div itemprop="telephone" id="phone" class="grid_second_column"></div>
 
 			<div class="grid_first_column"> Profession : </div>
-			<div id="profesie" class="grid_second_column"></div>
+			<div itemprop="hasOccupation" itemscope itemtype="https://pending.schema.org/Occupation" id="profesie" class="grid_second_column"></div>
 
 		</div>
 		<a onclick="editProfileInfo()"><i class="far fa-edit edit_icon"></i></a>
@@ -105,7 +105,7 @@
 		<a id="save-edit" onclick="saveProfileInfo()"><i class="far fa-save save_icon">save</i></a>
 	</div>
 
-	<div class="profile_info description" id="nonedit_desc"></div>
+	<div itemprop="description" class="profile_info description" id="nonedit_desc"></div>
 
 	<div class="profile_info description" id="edit_desc">
 		<textarea></textarea>
@@ -133,7 +133,7 @@
 		<br>
 		<a id="save-pasion"><i class="far fa-save save_icon">save</i></a>
 	</div>
-
+</div>
 	<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 
 	<script src="https://www.gstatic.com/firebasejs/5.7.3/firebase-app.js"></script>

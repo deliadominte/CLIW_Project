@@ -49,20 +49,20 @@
     <i class="fas fa-angle-right"></i> Invitation
 </div>
 
-<div class="content_box">
-    <div class="title_box">
+<div itemscope itemtype ="https://schema.org/InviteAction" class="content_box">
+    <div itemprop="about" class="title_box">
         <i class="fas fa-coffee"></i> Coffee Invitation
     </div>
 
     <div class="activity_info">
 
-        <div><i class="far fa-user-circle"></i> From: <h4><a id = "inv-from" ></a></h4></div>
+        <div itemprop="recipient" itemscope itemtype ="http://schema.org/Person"><i class="far fa-user-circle"></i> From: <h4><a id = "inv-from" ></a></h4></div>
 
-        <div><i class="fas fa-map-marker-alt"></i> Where: <h4 id = "inv-where"></h4></div>
+        <div itemprop="location" itemscope itemtype ="https://schema.org/Place" ><i class="fas fa-map-marker-alt"></i> Where: <h4 id = "inv-where"></h4></div>
 
-        <div><i class="far fa-clock"></i> When: <h4 id = "inv-when"></h4></div>
+        <div itemprop="startTime"><i class="far fa-clock"></i> When: <h4 id = "inv-when"></h4></div>
 
-        <div><i class="far fa-smile-beam"></i> Activity: <h4 id = "inv-activity"></h4></div>
+        <div itemprop="event"><i class="far fa-smile-beam"></i> Activity: <h4 id = "inv-activity"></h4></div>
 
     </div>
     <button id = "accept-inv">Accept</button>

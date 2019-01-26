@@ -17,16 +17,17 @@ window.onload = () => {
                         t.setSeconds(notif.created.seconds);
                         // console.log(t);
                         document.body.innerHTML += `
-                            <div class="content_box${!notif.seen ? ' unread' : ''}">
+                            <div itemscope itemtype ="https://schema.org/InformAction" class="content_box${!notif.seen ? ' unread' : ''}">
+                                
                                 <div class="img_container">
-                                <img src="${user.image}" alt="Avatar">
+                                <img itemprop="image" itemscope itemtype="https://schema.org/ImageObject" src="${user.image}" alt="Avatar">
                                 </div>
                             
-                                <div class="notificanion_message">
+                                <div itemprop="about" class="notificanion_message">
                                     ${notif.message}
                                 </div>
                             
-                                <div class="date">
+                                <div itemprop="startTime" class="date">
                                     ${t.toString().substring(0,t.toString().indexOf('G'))}
                                 </div>
                             </div>

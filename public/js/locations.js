@@ -26,8 +26,8 @@ window.onload = () => {
             document.getElementById("slide").innerHTML += `
                          <div class="mySlides fade">
                          <div class="numbertext">${slideIndex} / ${number}</div>
-                         <img src=${loc.image} alt="${loc.name}">
-                         <div class="text"><a href="onelocation.html?name=${loc.name}">${loc.name}</a></div>
+                         <img itemprop="image" src=${loc.image} alt="${loc.name}">
+                         <div itemprop="name" class="text"><a href="onelocation.html?name=${loc.name}">${loc.name}</a></div>
                          </div>
                          `;
             if(slideIndex==1){
@@ -70,8 +70,8 @@ window.onload = () => {
                             const loc = data.data();
                             document.getElementById("row").innerHTML += `
                               <div class="column">
-                              <img src=${loc.image} alt=${loc.name}>
-                              <a href="onelocation.html?name=${loc.name}">${loc.name}</a>
+                              <img itemprop="image" src=${loc.image} alt=${loc.name}>
+                              <a itemprop="name" href="onelocation.html?name=${loc.name}">${loc.name}</a>
                               </div> `;
                         });
                     });

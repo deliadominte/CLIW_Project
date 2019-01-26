@@ -47,41 +47,41 @@
         <a href="imbox.html"><i class="fas fa-envelope"></i>Messages</a>
         <a href="discover_people.html"><i class="fas fa-users"></i>Discover people</a>
     </div>
-
+    <div itemscope itemtype ="http://schema.org/Person">
     <div class="actual_page">
         <i class="fas fa-angle-right"></i> Profile <i class="fas fa-angle-right"></i> <p class = "inline" id = "uname_title"></p>
     </div>
 
     <div class="circle">
-        <img id ="profile-pic" src="media/profile.jpg" alt="Avatar">
+        <img itemprop="image" itemscope itemtype="https://schema.org/ImageObject" id ="profile-pic" src="media/profile.jpg" alt="Avatar">
     </div>
 
     <div class="btn_wrapper">
-        <a class="button" id ="send-invitation" href="create_invitation.html">Send invitation</a>
-        <a class="button" id ="send-message" href="new_msg.html">Send message</a>
+        <a class="button" itemscope itemtype="https://schema.org/InviteAction" id ="send-invitation" href="create_invitation.html">Send invitation</a>
+        <a class="button" itemscope itemtype="http://schema.org/Message" id ="send-message" href="new_msg.html">Send message</a>
     </div>
     <div class="profile_info" id="nonedit_pi">
         <div class="profile_info_grid">
             <div class="grid_first_column"> Name : </div>
-            <div id ="nume" class="grid_second_column"> </div>
+            <div itemprop="name" id ="nume" class="grid_second_column"> </div>
 
             <div class="grid_first_column"> Username : </div>
-            <div id ="username" class="grid_second_column"> </div>
+            <div itemprop="additionalName" id ="username" class="grid_second_column"> </div>
 
             <div class="grid_first_column"> Email : </div>
-            <div id ="email" class="grid_second_column"></div>
+            <div itemprop="email" id ="email" class="grid_second_column"></div>
 
             <div class="grid_first_column"> Phone : </div>
-            <div id ="phone" class="grid_second_column"></div>
+            <div itemprop="telephone" id ="phone" class="grid_second_column"></div>
 
             <div class="grid_first_column"> Profession : </div>
-            <div id ="profesie" class="grid_second_column"></div>
+            <div itemprop="hasOccupation" itemscope itemtype="https://pending.schema.org/Occupation" id ="profesie" class="grid_second_column"></div>
 
         </div>
     </div>
 
 
-    <div class="profile_info description" id="nonedit_desc">
+    <div itemprop="description" class="profile_info description" id="nonedit_desc">
     </div>
 
     <div class="profile_info" id="nonedit_passions">
@@ -93,7 +93,7 @@
 
     <div id ="container" class="content_box">
     </div>
-
+</div>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase-app.js"></script>

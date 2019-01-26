@@ -22,13 +22,13 @@ window.onload = () => {
                         displaystyle = "none";
                     }
                     document.getElementById('people-container').innerHTML += `
-                    <div id = "p-${ord}" style="display:${displaystyle}" class="pers">
-                    <img src=${image} alt="Avatar">
-                    <a class="name" href="profile_for_others.html?userId=${doc.id}">${user.name}</a>
+                    <div itemscope itemtype ="http://schema.org/Person" id = "p-${ord}" style="display:${displaystyle}" class="pers">
+                    <img itemprop="image" itemscope itemtype="https://schema.org/ImageObject" src=${image} alt="Avatar">
+                    <a itemprop="name" class="name" href="profile_for_others.html?userId=${doc.id}">${user.name}</a>
                     <a class="right" href="profile_for_others.html?userId=${doc.id}">See profile ></a>
                     <br>
-                    <p>Profession: <a class="profession">${user.profesie}</a></p>
-                    <p>Description: <a class="description">${user.description}</a></p>
+                    <p>Profession: <a itemprop="hasOccupation" itemscope itemtype="https://pending.schema.org/Occupation" class="profession">${user.profesie}</a></p>
+                    <p>Description: <a itemprop="description" class="description">${user.description}</a></p>
                 </div>
                     `;
                 }

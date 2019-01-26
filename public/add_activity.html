@@ -46,12 +46,12 @@
         <a href="imbox.html"><i class="fas fa-envelope"></i>Messages</a>
         <a href="discover_people.html"><i class="fas fa-users"></i>Discover people</a>
     </div>
-
+    <div itemscope itemtype ="http://schema.org/Action">
     <div class="actual_page">
         <i class="fas fa-angle-right"></i> Activity <i class="fas fa-angle-right"></i>Add
     </div>
 
-    <div class="content_box">
+    <div itemprop="location" itemscope itemtype ="https://schema.org/Place" class="content_box">
         <div class="title_box">
             Search and Add location
         </div>
@@ -66,7 +66,7 @@
         </div>
     </div>
 
-    <div class="content_box">
+    <div itemprop="target" class="content_box">
         <div class="title_box">
             Describe activity
         </div>
@@ -78,7 +78,7 @@
         </div>
     </div>
 
-    <div class="content_box">
+    <div itemprop="description" class="content_box">
         <div class="title_box">
             Activity related skills
         </div>
@@ -95,7 +95,7 @@
     <div class="wrapper_save_button">
         <button id="save_button" class="save_button">Save Activity</button>
     </div>
-    
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase-app.js"></script>
