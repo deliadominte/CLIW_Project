@@ -18,12 +18,20 @@ window.onload = () => {
                 received: [],
                 sent: []
             };
-    
-            db.collection('users').add(user).then(docRef => {
-                Cookies.set('userId', docRef.id);
-    
-                window.location.href = '/home.html';
+            db.collection('users').where('username', '==', user.username).get().then(querySnapshot => {
+                let flag=0;
+                querySnapshot.forEach(data => {flag=1;});
+                if(flag!=0)
+                alert('Username already exists!');
+                else{
+                    db.collection('users').add(user).then(docRef => {
+                        Cookies.set('userId', docRef.id);
+            
+                        window.location.href = '/home.html';
+                    });
+                }
             });
+            
         }
     } else {
         window.location.href = '/home.html';

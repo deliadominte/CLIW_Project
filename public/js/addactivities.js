@@ -40,37 +40,48 @@ window.onload = () => {
 
                 activity.skills.push(element.value);
             }
+            console.log(activity);
+            if (activity.location == "default") alert("Choose an location!");
+            else {
+                if (activity.description[0] == "" || activity.description[1] == "" || activity.description[2] == ""|| activity.description[3] == "" ) 
+                alert("Describe your activity!");
+                else {
+                    if (activity.skills[0] == "" || activity.skills[1] == "" || activity.skills[2] == "") alert("What are your skills?");
+                    else {
+                        db.collection('activities').add({ ...activity }).then(docRef => {
+                            let userIds = [];
+                            let currentUser;
 
-            db.collection('activities').add({ ...activity }).then(docRef => {
-                let userIds = [];
-                let currentUser;
+                            db.collection('users').get().then(async querySnapshot => {
+                                querySnapshot.forEach(data => {
+                                    if (data.id !== userId) {
+                                        userIds.push(data.id);
+                                    } else {
+                                        currentUser = data.data();
+                                    }
+                                });
 
-                db.collection('users').get().then(async querySnapshot => {
-                    querySnapshot.forEach(data => {
-                        if (data.id !== userId) {
-                            userIds.push(data.id);
-                        } else {
-                            currentUser = data.data();
-                        }
-                    });
+                                for (let index = 0; index < userIds.length; index++) {
+                                    const id = userIds[index];
 
-                    for (let index = 0; index < userIds.length; index++) {
-                        const id = userIds[index];
-                        
-                        const notif = {
-                            created: firebase.firestore.FieldValue.serverTimestamp(),
-                            seen: false,
-                            userId: id,
-                            createdBy: currentUser.username,
-                            message: `<a href="/profile_for_others.html?userId=${userId}">${currentUser.name}</a> invited you to join her <a href="/activity_for_others.html?activityId=${docRef.id}">Activity</a>`
-                        }
+                                    const notif = {
+                                        created: firebase.firestore.FieldValue.serverTimestamp(),
+                                        seen: false,
+                                        userId: id,
+                                        createdBy: currentUser.username,
+                                        message: `<a href="/profile_for_others.html?userId=${userId}">${currentUser.name}</a> invited you to join her <a href="/activity_for_others.html?activityId=${docRef.id}">Activity</a>`
+                                    }
 
-                        await db.collection('notifications').add({ ...notif });
+                                    await db.collection('notifications').add({ ...notif });
+                                }
+
+                                window.location.href = '/myactivity.html';
+                            });
+                        });
+
                     }
-
-                    window.location.href = '/myactivity.html';
-                });
-            });
+                }
+            }
         }
     } else {
         window.location.href = '/login.html';
