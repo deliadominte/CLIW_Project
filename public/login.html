@@ -9,21 +9,29 @@
 </head>
 <body>
 
-<div class="content">
-    <h1 class="title">METOO</h1>
-    <div class="btns-container">
-        <a href="#" class="button" id="fb_btn">
-            <img src="media/Facebook-logo.png" alt="Facebook">  Log In with Facebook
-        </a>
-        <a href="#" class="button" id="twitter_btn" >
-            <img src="media/twitter-logo.png" alt="Twitter">  Log In with Twitter
-        </a>
-        <a href="#" class="button" id="google_btn">
-            <img src="media/google-logo.png" alt="Google">  Log In with Google+
-        </a>
-        <p>or</p>
-        <a class="ref" href="signup.html">Sign up</a>
+    <div class="content">
+        <h1 class="title">METOO</h1>
+        <div class="big-container">
+    
+            <form id="loginForm">
+              <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" id="username" placeholder="Enter Username" name="uname" required>
+    
+                <label for="psw"><b>Password</b></label>
+                <input type="password" id="password" placeholder="Enter Password" name="psw" required>
+                    
+                <button type="submit">Login</button>
+              </div>
+            </form>
+            <p>or</p>
+            <a class="ref" href="signup.html">Sign up</a>
+        </div>
+        <div class="container_img">
+            <img src="media/roses.png" alt="rose">
+        </div>
     </div>
+<<<<<<< HEAD
     <div class="container_img">
         <img src="media/roses.png" alt="rose">
     </div>
@@ -35,6 +43,8 @@
 
     <button type="submit">Login</button>
 </form>
+=======
+>>>>>>> 05feefcfadeb2d48ff293dc40234284f470fad8b
 
 <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 
