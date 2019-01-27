@@ -50,6 +50,11 @@ self.addEventListener('install', e => {
         `/js/notif.js`,
         `/js/menu.js`,
         `/js/account.js`,
+        `/js/myactivities.js`,
+        `/js/locations.js`,
+        `/js/tell-offline.js`,
+        `/js/sent.js`,
+        `/js/imbox.js`,
         '/manifest.json',
       ])
           .then(() => self.skipWaiting());
