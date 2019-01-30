@@ -3,6 +3,16 @@ window.onload = () => {
 
     if (userId) {
         if( navigator.onLine){
+
+            // pun in baza de date informatiile actualizate despre utilizator(imaginea)
+            let get_user_info = localStorage.getItem("user_modified");
+            if( user_info!=0){
+                let user_ls = JSON.parse(get_user_info);
+                db.collection("users").doc(userId).set({ ...user_ls }, { merge: true });
+                localStorage.removeItem("user_modified");
+            }
+
+
             const btn_save = document.getElementById('btn_save');
 
             btn_save.onclick = e => {
@@ -135,9 +145,41 @@ window.onload = () => {
             });
         }
         else{
-            let user_info = localStorage.getItem("user");
+            var user_info = localStorage.getItem("user");
             if( user_info!=0){
+
+                btn_save.onclick = e => {
+                    const btn_upload = document.getElementById('btn_upload').files[0];
+    
+                    var reader = new FileReader();
+    
+                    reader.addEventListener("load", function () {
+                        const image = reader.result;
+    
+                        document.getElementById('profile-pic').src = image;
+                        
+                        let user = JSON.parse(user_info);
+                        user.image = image;
+                        alert(user.image);
+                        localStorage.setItem("user_modified", JSON.stringify(user));
+
+                    }, false);
+    
+                    if (btn_upload) {
+                        reader.readAsDataURL(btn_upload);
+                    }
+                }
+
                 let user = JSON.parse(user_info);
+
+                const image = document.getElementById('profile-pic');
+
+                    if (user.image) {
+                        image.src = user.image;
+                    } else {
+                        image.src = 'media/profile.jpg';
+                    }
+
                 document.getElementById('nume').textContent = user.name;
                 document.getElementById('email').textContent = user.email;
                 document.getElementById('username').textContent = user.username;

@@ -26,7 +26,7 @@ window.onload = () => {
                             <div itemscope itemtype ="https://schema.org/Message" class="msg">
                             <div itemprop="recipient" itemscope itemtype ="http://schema.org/Person">
                             <img itemprop="image" itemscope itemtype="https://schema.org/ImageObject"  src="${sent_to.image}" alt="Avatar">
-                            <a itemprop="name" class="name" href="/profile_for_others.html?userId=${sent_to.id}">${sent_to.name}</a>
+                            <a itemprop="name" class="name" href="/profile_for_others.html?userId=${data.id}">${sent_to.name}</a>
                             </div>
                             <br>
                             <p>Subject: </p><a itemprop="about" class="subject">${msg.subject}</a>

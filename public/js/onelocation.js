@@ -107,18 +107,18 @@ window.onload = () => {
                     <p>Most frequently: ${max_skill}</p>
                     <!--Api Google Maps-->
                     <h4>Localization:</h4>
-                    <div itemprop="location" itemscope itemtype ="https://schema.org/Place" id="map">${location.location}</div>
+                    <div itemprop="location" itemscope itemtype ="https://schema.org/Place">${location.location}</div> 
             
                 </div>`;
                 
-                var latitudine=10;
-                var longitudine=10;
-                var mapOptions = {
-                    center: new google.maps.LatLng(latitudine, longitudine),
-                    zoom: 10,
-                    mapTypeId: google.maps.MapTypeId.HYBRID
-                    }
-                var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+                // var latitudine=10;
+                // var longitudine=10;
+                // var mapOptions = {
+                //     center: new google.maps.LatLng(latitudine, longitudine),
+                //     zoom: 10,
+                //     mapTypeId: google.maps.MapTypeId.HYBRID
+                //     }
+                // var map = new google.maps.Map(document.getElementById("map"), mapOptions);
                 });
 
                 
