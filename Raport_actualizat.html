@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html  lang="ro-RO" vocab="http://schema.org/" typeof="schema:ScholarlyArticle" property="https://github.com/deliadominte/CLIW_Project">
+<head>
+    <meta charset="utf-8">
+    <title>Progresul aplicatiei </title>
+    <style>ol{ list-style-type: none; } body{margin-right:7%; margin-left: 7%; font-size:120%;} img{width: 70%;}</style>
+</head>
+<body>
+<header>
+    <h1 property="http://purl.org/dc/terms/title">METOO: Progresul aplicatiei </h1>
+</header>
+<div role="contentinfo">
+    <hr>
+    <link property="itemListOrder" href="http://schema.org/ItemListOrderAscending"/>
+    <ol role="directory">
+        <li property="itemListElement" typeof="ListItem"><a href="#abstract">
+            <span>1.</span> Abstract</a>
+        </li>
+        <li property="itemListElement" typeof="ListItem"><a href="#introducere">
+            <span>2.</span> Introducere</a>
+        </li>
+        <li property="itemListElement" typeof="ListItem"><a href="#etape">
+            <span>3.</span> Etapele intermediare ale dezvoltării proiectului</a>
+        </li>
+        <li property="itemListElement" typeof="ListItem"><a href="#modelare">
+            <span>4.</span> Modelarea datelor proprii</a>
+        </li>
+        <li property="itemListElement" typeof="ListItem"><a href="#stocare">
+            <span>5.</span> Soluţii de stocare disponibile la nivel de client</a>
+        </li>
+        <li property="itemListElement" typeof="ListItem"><a href="#teste">
+            <span>4.</span> Testarea si Exploatarea practica</a>
+        </li>
+        <li property="itemListElement" typeof="ListItem"><a href="#resurse">
+            <span>7.</span> Resurse web</a>
+        </li>
+        <li property="itemListElement" typeof="ListItem"><a href="#concluzie">
+            <span>8.</span> Concluzie</a>
+        </li>
+    </ol>
+    <dl>
+        <dt>Autori</dt>
+        <dd property="http://purl.org/dc/terms/creator">
+            <a typeof="sa:ContributorRole" property="url" href="https://github.com/NicoletaIoana"><span property="familyName">Băcăoanu</span><span property="givenName">Nicoleta-Ioana</span></a>
+            <a typeof="sa:ContributorRole" property="url" href="https://github.com/deliadominte"><span property="familyName">Dominte</span> <span property="givenName">Delia</span></a>
+        </dd>
+        <dt>Proiect</dt>
+        <dd>
+            <a property="url" href="https://github.com/deliadominte/CLIW_Project">GitHub</a>
+        </dd>
+        <dt>Tags</dt>
+        <dd>
+            <span>info, project, infoiasi, cliw, web, metoo </span>
+        </dd>
+    </dl>
+
+</div>
+<hr>
+<section id="abstract" role="doc-introduction" property="about">
+    <h3><span>1.</span> Abstarct:</h3>
+    <p>
+        Raportul de fata cuprinde detalii legate de modelarea si stocarea datelor, si de asemenea detalii despre etapele necesare pentru dezvoltarea proiectului "METOO",
+        propus in cadrul laboratorului de Dezvoltarea aplicaţiilor Web la nivel de client.
+    </p>
+</section>
+<section id="introducere" role="doc-introduction" property="about">
+    <h3><span>2.</span> Introducere:</h3>
+    <p>
+        METOO se adreseaza persoanele care studiază/lucrează în localuri comune disponibile
+        într-un areal geografic: biblioteci, cafenele sau spaţii de co-working. Aplicația încurajeaza
+        interacțiunea dintre aceste persoane, pentru a putea studia/lucra împreuna.  Istoria a dovedit că oamenii sunt capabili de lucruri
+        mărețe doar dacă colaborează, sau după cum spune Chuck Page, “o frunză ce lucrează de una singură nu face umbră’’.
+    </p>
+</section>
+
+<section id="etape" role="doc-chapter" property="about">
+    <h3><span>3.</span> Etapele intermediare ale dezvoltării proiectului:</h3>
+    <link property="itemListOrder" href="http://schema.org/ItemListOrderAscending"/>
+    <ul property="steps">
+        <li property="itemListElement" typeof="ListItem">
+            Implementare sistem de Login/Register printr-un cont disponibil pe o retea sociala.
+        </li>
+        <li property="itemListElement" typeof="ListItem">
+            Implementarea paginilor de edit/adaugare/vizualizare pentru Profile si  Locations.
+        </li>
+        <li property="itemListElement" typeof="ListItem">
+            Functionalitate pentru pagina de Discover people.
+        </li>
+        <li property="itemListElement" typeof="ListItem">
+            Implementarea functionalitatii de adaugare unei activitati.
+        </li>
+        <li property="itemListElement" typeof="ListItem">
+            Functionalitate pentru mecanismul de notificare pentru: mesaje, invitatii de cafea, activitati.
+        </li>
+        <li property="itemListElement" typeof="ListItem">
+            Implementarea functionalitatii de compunere/trimitere/vizualizare mesaje.
+        </li>
+        <li property="itemListElement" typeof="ListItem">
+            Implementarea functionalitatii de trimitere/vizualizare a invitatiilor la cafea.
+        </li>
+
+    </ul>
+    <figure typeof="sa:image"><img src="./architecture/timeline.jpg" alt="schelet"></figure>
+</section>
+
+<section id="modelare" role="doc-chapter" property="about">
+    <h3><span>4.</span> Modelarea datelor proprii:</h3>
+    <h5>Scheme de microdate HTML5 </h5>
+    <ul>
+    	<li property="itemListElement" typeof="ListItem">
+    		Modelare locatii: http://schema.org/location
+    	</li >
+    	<li property="itemListElement" typeof="ListItem">
+    		Modelare profil: http://schema.org/ProfilePage
+    	</li>
+    	<li property="itemListElement" typeof="ListItem">
+    		Modelare mesaje: http://schema.org/Message
+    	</li>
+    	<li property="itemListElement" typeof="ListItem">
+    		Modelare invitatie cafea: https://schema.org/InviteAction
+    	</li>
+     	<li property="itemListElement" typeof="ListItem">
+    		Modelare activitate:  http://schema.org/Action
+    	</li>
+    	<li property="itemListElement" typeof="ListItem">
+    		https://schema.org/CafeOrCoffeeShop
+    	</li>
+    	<li property="itemListElement" typeof="ListItem">
+    		https://schema.org/Library
+    	</li>
+    	<li property="itemListElement" typeof="ListItem">
+    		https://schema.org/Action
+    	</li>
+    	<li property="itemListElement" typeof="ListItem">
+    		https://schema.org/Course
+    	</li>
+    	<li property="itemListElement" typeof="ListItem">
+    		http://schema.org/Occupation
+    	</li>
+    	<li property="itemListElement" typeof="ListItem">
+    		http://schema.org/Person
+    	</li>
+    	<li property="itemListElement" typeof="ListItem">
+    		https://schema.org/Event
+    	</li>
+    	<li property="itemListElement" typeof="ListItem">
+    		https://schema.org/DateTime
+    	</li>
+    	    	<li property="itemListElement" typeof="ListItem">
+    		https://schema.org/ImageObject
+    	</li>
+    	    	<li property="itemListElement" typeof="ListItem">
+    		https://schema.org/Thing
+    	</li>
+
+    </ul>
+
+    <h5>Modelarea datelor ce urmeaza a fi cache-uite </h5>
+    	Datele ce urmeaza a fi cache-uite vor fi stocate sub forma de perechi de obiecte "Request" si "Response" ( "The caches only store pairs of Request and Response objects, representing HTTP requests and responses, respectively. However, the requests and responses can contain any kind of data that can be transferred over HTTP." : sursa->https://developers.google.com/web/fundamentals/instant-and-offline/web-storage/cache-api)
+    	<h6>Exemplu request : </h6>
+    		<p>const request = new Request('/images/sample1.jpg');</p>
+    	<h6>Exemplu Response:</h6>
+    	<p>const imageBlob = new Blob([data], {type: 'image/jpeg'});</p>
+		<p>const imageResponse = new Response(imageBlob);</p>
+		<p>const stringResponse = new Response('Hello world');</p>
+
+
+</section>
+<section id="stocare" role="doc-chapter" property="about">
+    <h3><span>5.</span> Soluţii de stocare disponibile la nivel de client</h3>
+    <p>
+    	Ca solutie de stocare la nivel de client, vom folosi Cache API.
+    	Cache API  este un sistem pentru stocarea și preluarea cererilor de rețea și a răspunsurilor corespunzătoare. Acesta fost creat pentru a permite service worker-ilor să cacheuiasca cererile de rețea, astfel încât aceștia să poată oferi răspunsuri adecvate chiar și offline. Totuși, acesta poate fi folosit și ca mecanism general de stocare.
+    	Mai multe informatii despre acesta se pot gasi de exemplu la adresa: https://developers.google.com/web/fundamentals/instant-and-offline/web-storage/cache-api
+    </p>
+</section>
+<section id="teste" role="doc-chapter" property="about">
+    <h3><span>6.</span> Testarea si Exploatarea practica:</h3>
+    <p>
+        Dupa ce am implementat functionalitatea proiectului, si acesta este complet din punct de vedere front-end si back-end, am introdus in baza de date
+        utilizatori, locatii si activitati valide dar si invalide, in vederea rularii unui set de teste. Aceste teste le-am realizat pentru a fi siguri ca
+        functionalitatile implementate produc rezultatul dorit. In cazul in care acestea nu au produs rezultatul dorit, sau au aparut erori, am incercat sa rezolvam problemele.
+        Exploatarea practica a solutiei realizate, a fost produsa de catre noi, gandindu-ne la momentele cand am avut nevoie de ajutor, cand am studiat la o materie sau un domeniu in afara facultatii, si ne-ar fi fost mult mai usor sa intrebam pe cineva mai experimentat ca noi. Acest proiect va putea conecta oamenii interesati de aceleasi domenii si incurajeaza invatatul eficient.
+
+    </p>
+</section>
+
+<section id="resurse" role="doc-chapter" property="about">
+    <h3><span>7.</span> Resurse web</h3>
+
+
+        <li property="itemListElement" typeof="ListItem">
+		https://www.smashingmagazine.com/2016/02/making-a-service-worker/
+        </li>
+
+        <li property="itemListElement" typeof="ListItem">
+		https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle
+        </li>
+
+        <li property="itemListElement" typeof="ListItem">
+		https://www.smashingmagazine.com/2016/08/a-beginners-guide-to-progressive-web-apps/
+        </li>
+        
+        <li property="itemListElement" typeof="ListItem">
+        https://developers.google.com/web/fundamentals/instant-and-offline/web-storage/cache-api
+        </li>
+
+        <li property="itemListElement" typeof="ListItem">
+        https://medium.freecodecamp.org/progressive-web-apps-102-building-a-progressive-web-app-from-scratch-397b72168040?fbclid=IwAR2qzqnQcU2dWMI16oQUsfVwttL0RFyzHAYDtn0gW7j-OcbPpjS5-ljth60
+       </li>
+
+       <li property="itemListElement" typeof="ListItem">
+		https://pwa.tips/codelabs/?fbclid=IwAR3DLkMMpgrthDi_mpgdMwAHooK_PaR1LxMWS3-sXikYUOd6DHfzy7kFxuU#/introduction?_k=a0x38p
+        </li>
+</section>
+
+<section id="concluzie" role="doc-chapter" property="about">
+    <h3><span>8.</span> Concluzie</h3>
+    <p>
+        Acestea sunt etapele intermediare ale dezvoltarii proiectului si cateva detalii despre cum vom modela datele.
+    </p>
+</section>
+
+</body>
+</html>

@@ -68,7 +68,7 @@ window.onload = () => {
                     if (ultimele.length>=3) limit=3;
                     else limit=ultimele.length;
                     for (let index=0 ;index < limit;index++){
-                        db.collection('locations').where('name','==',ultimele[index]).get().then(querySnapshot => {
+                        db.collection('locations').where('name','==',ultimele[ultimele.length-index-1]).get().then(querySnapshot => {
                             querySnapshot.forEach(data => {
                                 const loc = data.data();
                                 document.getElementById("row").innerHTML += `
